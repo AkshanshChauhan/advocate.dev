@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [https://637014f43de31a36cbd37c9a--gilded-starlight-987bbc.netlify.app/](live) to view it in your browser.
+Open [live](https://637014f43de31a36cbd37c9a--gilded-starlight-987bbc.netlify.app/) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
