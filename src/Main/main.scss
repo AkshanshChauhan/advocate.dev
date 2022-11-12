@@ -1,0 +1,139 @@
+.homeBackground {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: pageLoad 0.1s ease-in-out reverse;
+    background-image: url("../Images/homeBackground.svg");
+}
+
+.homePage {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    margin-top: 20vh;
+    justify-items: center;
+
+    .ourProcessInner {
+        width: 80%;
+        display: flex;
+        margin-top: 150px;
+        outline: 2px solid #CBCBCB;
+        justify-content: space-evenly;
+
+        .ourProcessInnerSection {
+            gap: 5px;
+            width: 200px;
+            display: grid;
+            text-align: center;
+            justify-items: center;
+            transform: translateY(-35%);
+        }
+
+        .processImage {
+            width: 100px;
+        }
+    }
+
+    .affidavit {
+        display: grid;
+        padding: 50px;
+        background-size: cover;
+        width: calc(100% - 100px);
+        background-repeat: no-repeat;
+        background-image: url("../Images/affidavitBg.svg");
+
+        .affidavitProcessBox {
+            gap: 10px;
+            display: flex;
+            color: white;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: center;
+
+            .affidavitProcess {
+                gap: 10px;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h3 {
+                    font-weight: 400;
+                }
+
+                .affidavitProcessIcon {
+                    width: 100px;
+                    height: 100px;
+                    background-size: cover;
+                }
+            }
+
+            .affidavitProcessArrow {
+                width: 50px;
+                height: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .affidavitButton {
+            border: 0px;
+            outline: 0px;
+            font-weight: 500;
+            padding: 15px 40px;
+            border-radius: 10px;
+            justify-self: center;
+            background-color: #FFCD6C;
+        }
+    }
+}
+
+.cards {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.realClientReview {
+    width: 100%;
+    margin: 40px 0px;
+    display: grid;
+    padding: 20px 0px;
+    background-color: #E5E9EA;
+
+    .realClientReviewTop {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .realClientReviewSections {
+        gap: 20px;
+        display: flex;
+        margin: 20px 0px;
+        align-content: center;
+        justify-content: center;
+
+        .realClientReviewSection {
+            width: 28%;
+            padding: 40px;
+            background-color: white;
+        }
+    }
+}
+
+@keyframes pageLoad {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

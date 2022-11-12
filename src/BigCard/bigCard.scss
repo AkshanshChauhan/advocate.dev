@@ -1,0 +1,41 @@
+.bigCard {
+    width: 400px;
+    height: 510px;
+    border-radius: 10px;
+    outline: 2px solid #707070;
+
+    .upperBigCard {
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: gainsboro;
+    }
+
+    .lowerBigCard {
+        gap: 10px;
+        display: grid;
+        padding: 20px;
+
+        .subHead{
+            font-size: xx-small;
+
+            i {
+                color: #AE7227;
+            }
+        }
+
+        .contentText {
+            font-size: small;
+            color: #8F8F8F;
+        }
+
+        .lowerBigCardRdMo {
+            display: flex;
+            color: #AE7227;
+            
+            h3 {
+                margin-left: auto;
+            }
+        }
+    }
+}

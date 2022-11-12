@@ -1,0 +1,37 @@
+* {
+    transition-duration: 0.3s;
+}
+
+.heading {
+    font-weight: 500;
+    color: #191A1F;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.line {
+    height: 2px;
+    width: 100px;
+    margin: 1.2rem auto;
+    background-color: #C1945C;
+}
+
+.subHeading {
+    width: 45vw;
+    margin: 0px auto;
+    color: #8B9B9F;
+    text-align: center;
+}
+
+.supText {
+    font-weight: 500;
+}
+
+.subText {
+    font-size: small;
+    color: #8B9B9F;
+}
+
+button {
+    cursor: pointer;
+}

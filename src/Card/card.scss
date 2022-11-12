@@ -1,0 +1,81 @@
+* {
+    outline: 0px solid red;
+}
+
+.card {
+    gap: 10px;
+    width: 400px;
+    display: grid;
+    padding: 10px;
+    padding-bottom: 0px;
+    height: fit-contents;
+    border-radius: 10px;
+    outline: 1px solid #E3E3E3;
+    background-color: #F9F9F9;
+
+    .upperCard {
+        gap: 10px;
+        display: flex;
+
+        .innerUpperCardLeft {
+            padding: 60px;
+            border-radius: 10px;
+            background-size: cover;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .innerUpperCardMid {
+            gap: 10px;
+            width: 100%;
+            display: grid;
+
+            .innerUpperCardMidTop {
+                display: flex;
+                .heart {
+                    border: 0px;
+                    padding: 20px;
+                    margin-left: auto;
+                    height: fit-content;
+                    background-size: cover;
+                    background-color: #F9F9F9;
+                    background-image: url("../Images/heart.svg");
+                }
+                
+            }
+
+            .innerUpperCardMidBottom {
+                gap: 10px;
+                width: 80%;
+                display: flex;
+                padding: 10px;
+                text-align: center;
+                background-color: #F6E9CF;
+                justify-content: space-evenly;
+            }
+
+        }
+    }
+
+    .lowerCard {
+        display: flex;
+
+        .innerLowerCardLeft {
+            width: 80%;
+        }
+
+        .viewButton {
+            height: fit-content;
+            width: 20%;
+            color: white;
+            padding: 10px 20px;
+            background-color: black;
+            transform: translateX(10px) translateY(20px);
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+.small {
+    font-size: 10px;
+}
