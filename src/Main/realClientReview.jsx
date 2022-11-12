@@ -5,7 +5,7 @@ function RealClientReview(info) {
     return (
         <div className="realClientReview">
             <div className="realClientReviewTop">
-                <img src={rcr} width={"100px"} />
+                <img src={rcr} width={"100px"} alt={""} />
                 <h1 style={{fontWeight: "500"}}>REAL CLIENT REVIEW</h1>
             </div>
             <div className="realClientReviewSections">
