@@ -137,13 +137,14 @@ function HomePage() {
             </div>
             <Affidavit />
             <div className="cards">
-                {json.map(()=>
+                {json.map((e, k)=>
                     <BigCard 
                         bgurl={profileImage} 
                         heading="What’s Coming for Legal Departments in 2022? (Adv.)" 
                         name="Akshansh" 
                         date="Febuary 3, 2022" 
                         content="Corporate legal departments have seen some significant  changes over the past couple of years. The ongoing explosion of data volumes and rapid adoption of new communications technologies have made e-discovery operations more complex and expensive to manage, convincing many departments to move operations in-house. The requirements of privacy regulations, and the data inventory, discovery, and production capabilities necessary to meet......"
+                        key={k}
                     />
                 )}
             </div>
