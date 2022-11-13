@@ -1,9 +1,12 @@
 import "./main.scss";
 import React from "react";
 import Card from "../Card";
+import ourVision from "../Images/ourVision.svg";
 import TopHead from "./topHead";
+import Trouble from "./trouble";
 import BigCard from "../BigCard";
 import Affidavit from "./affidavit";
+import OurVision from "./ourVision";
 import OurProcess from "./ourProcess";
 import RealClientReview from "./realClientReview";
 import profileImage from "../Images/profileImage.svg";
@@ -142,6 +145,8 @@ function HomePage() {
             </div>
             <ButtonTem val="LOAD MORE BLOGS" />
             <RealClientReview btn={<ButtonTem val="VIEW ALL REVIEW" />} />
+            <OurVision imgWidth={50} background={ourVision} color="white" width="70%" />
+            <Trouble />
         </div>
     )
 }

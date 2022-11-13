@@ -87,43 +87,79 @@
             background-color: #FFCD6C;
         }
     }
-}
 
-.cards {
-    gap: 10px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px 0px;
-    align-items: center;
-    justify-content: center;
-}
-
-.realClientReview {
-    width: 100%;
-    margin: 40px 0px;
-    display: grid;
-    padding: 20px 0px;
-    background-color: #E5E9EA;
-
-    .realClientReviewTop {
+    .cards {
         gap: 10px;
+        width: 100%;
         display: flex;
+        flex-wrap: wrap;
+        margin: 50px 0px;
         align-items: center;
         justify-content: center;
     }
-
-    .realClientReviewSections {
-        gap: 20px;
+    
+    .realClientReview {
+        width: 100%;
+        margin: 40px 0px;
+        display: grid;
+        padding: 20px 0px;
+        background-color: #E5E9EA;
+    
+        .realClientReviewTop {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .realClientReviewSections {
+            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0px;
+            align-content: center;
+            justify-content: center;
+    
+            .realClientReviewSection {
+                width: 28%;
+                padding: 40px;
+                background-color: white;
+            }
+        }
+    }
+    
+    .ourVisionSection {
+        gap: 10px;
+        width: 100%;
         display: flex;
-        margin: 20px 0px;
-        align-content: center;
+        padding: 200px 0px;
+        align-items: center;
+        flex-direction: column;
         justify-content: center;
+    }
 
-        .realClientReviewSection {
-            width: 28%;
-            padding: 40px;
-            background-color: white;
+    .troubleSection {
+        gap: 50px;
+        display: grid;
+        margin: 100px 0px;
+
+        .troubleSectionSteps {
+            gap: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .troubleSectionStep {
+                gap: 10px;
+                width: 250px;
+                padding: 40px;
+                display: grid;
+                align-content: flex-start;
+
+                p {
+                    color: #838596;
+                }
+            }
         }
     }
 }
