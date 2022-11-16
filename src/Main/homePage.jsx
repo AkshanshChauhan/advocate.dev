@@ -8,9 +8,6 @@ import BigCard from "../BigCard";
 import Affidavit from "./affidavit";
 import OurVision from "./ourVision";
 import OurProcess from "./ourProcess";
-import logo from "../Images/mainLogo.svg";
-import fbimg from "../Images/facebook.svg";
-import inimg from "../Images/instagram.svg";
 import ourVision from "../Images/ourVision.svg";
 import RealClientReview from "./realClientReview";
 import profileImage from "../Images/profileImage.svg";
@@ -152,7 +149,7 @@ function HomePage() {
             <RealClientReview btn={<ButtonTem val="VIEW ALL REVIEW" />} />
             <OurVision imgWidth={50} background={ourVision} color="white" width="70%" />
             <Trouble />
-            <Footer logo={logo} fbImg={fbimg} inImg={inimg} />
+            <Footer />
         </div>
     )
 }

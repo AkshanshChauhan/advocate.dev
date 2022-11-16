@@ -5,7 +5,7 @@
     </pattern>
   </defs>
   <g id="Group_74" data-name="Group 74" transform="translate(-1219 -5497)">
-    <rect id="_3201923-200" data-name="3201923-200" width="80" height="79" transform="translate(1219 5509)" opacity="0.6" fill="url(#pattern)"/>
-    <rect id="Rectangle_77" data-name="Rectangle 77" width="71" height="99" transform="translate(1228 5497)" fill="#edb155" style="mix-blend-mode: overlay;isolation: isolate"/>
+    <rect id="_3201923-200" data-name="3201923-200" width="80" height="79" transform="translate(1219 5509)" opacity="0.6" fill="url(#pattern)" />
+    <rect id="Rectangle_77" data-name="Rectangle 77" width="71" height="99" transform="translate(1228 5497)" fill="rgba(0,0,0,0)" style="mix-blend-mode: overlay;isolation: isolate;"/>
   </g>
 </svg>

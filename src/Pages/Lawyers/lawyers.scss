@@ -1,0 +1,160 @@
+.prefLinksBox {
+    width: 100%;
+    margin: 50px 0px;
+    height: fit-content;
+
+    .prefLinks {
+        gap: 10px;
+        display: flex;
+        padding: 10px 0px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: space-evenly;
+
+        .prefLinkBtn {
+            border: 0px;
+            margin-bottom: 40px;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            border-radius: 50px;
+            background-color: white;
+            background-size: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 10px rgb(123, 123, 123);
+        }
+
+        .prefLinkBtn:nth-child(1) {
+            background-image: url('imgs/logo1.svg');
+        }
+
+        .prefLinkBtn:nth-child(1)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Sexual Offences";
+        }
+
+        .prefLinkBtn:nth-child(2) {
+            background-image: url('imgs/logo2.svg');
+        }
+
+        .prefLinkBtn:nth-child(2)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Bail";
+        }
+
+        .prefLinkBtn:nth-child(3) {
+            background-image: url('imgs/logo3.svg');
+        }
+
+        .prefLinkBtn:nth-child(3)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Internet Crime";
+        }
+
+        .prefLinkBtn:nth-child(4) {
+            background-image: url('imgs/logo4.svg');
+        }
+
+        .prefLinkBtn:nth-child(4)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Domestic Offences";
+        }
+
+        .prefLinkBtn:nth-child(5) {
+            background-image: url('imgs/logo5.svg');
+        }
+
+        .prefLinkBtn:nth-child(5)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Youth Charges";
+        }
+
+        .prefLinkBtn:nth-child(6) {
+            background-image: url('imgs/logo6.svg');
+        }
+
+        .prefLinkBtn:nth-child(6)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Firearm & Weapons";
+        }
+
+        .prefLinkBtn:nth-child(7) {
+            background-image: url('imgs/logo7.svg');
+        }
+
+        .prefLinkBtn:nth-child(7)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Assaults & Threats";
+        }
+
+        .prefLinkBtn:nth-child(8) {
+            background-image: url('imgs/logo8.svg');
+        }
+
+        .prefLinkBtn:nth-child(8)::after {
+            right: 0px;
+            top: 110px;
+            width: 100px;
+            height: 100px;
+            color: #525252;
+            font-size: larger;
+            position: absolute;
+            content: "Property, Fraud & Theft";
+        }
+    }
+
+    & .prefLinks::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.cards {
+    gap: 20px;
+    margin: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

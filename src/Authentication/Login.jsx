@@ -9,8 +9,8 @@ function Login(info) {
                     <h2>Mobile no</h2>
                 </div>
                 <div className="loginInnerBottom">
-                    <input type={"tel"} placeholder={"Monbile no"}/>
-                    <span className="inputPrefix">91(IN)</span>
+                    <input type={"tel"} placeholder={"Mobile no"}/>
+                    <span className="inputPrefix">+91(IN)</span>
                 </div>
             </div>
             <div className="loginInnerSection">

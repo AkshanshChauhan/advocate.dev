@@ -6,6 +6,6 @@
   </defs>
   <g id="Group_75" data-name="Group 75" transform="translate(-730 -5505)">
     <rect id="Gun-icon" width="80" height="81" transform="translate(739 5505)" opacity="0.6" fill="url(#pattern)"/>
-    <rect id="Rectangle_76" data-name="Rectangle 76" width="90" height="73" transform="translate(730 5513)" fill="#edb155" style="mix-blend-mode: overlay;isolation: isolate"/>
+    <rect id="Rectangle_76" data-name="Rectangle 76" width="90" height="73" transform="translate(730 5513)" fill="rgba(0,0,0,0)" style="mix-blend-mode: overlay;isolation: isolate"/>
   </g>
 </svg>

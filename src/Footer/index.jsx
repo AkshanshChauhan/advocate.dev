@@ -1,16 +1,19 @@
 import "./footer.scss";
 import React from "react";
+import logo from "./imgs/mainLogo.svg"
+import fbimg from "./imgs/facebook.svg";
+import inimg from "./imgs/instagram.svg";
 
-function Footer(info) {
+function Footer() {
     return (
         <div className="footer">
             <div className="footerInner">
                 <div className="footerInnerLeft">
-                    <div className="footerInnerLeftLogo" style={{backgroundImage: "url(" + info.logo + ")"}}></div>
+                    <div className="footerInnerLeftLogo" style={{backgroundImage: "url(" + logo + ")"}}></div>
                     <button className="footerInnerLeftButton">LOG IN</button>
                     <div className="footerInnerLeftBottom">
-                        <div className="footerInnerLeftBottomFbLogo" style={{backgroundImage: "url(" + info.fbImg + ")"}}></div>
-                        <div className="footerInnerLeftBottomInstaLogo" style={{backgroundImage: "url(" + info.inImg + ")"}}></div>
+                        <div className="footerInnerLeftBottomFbLogo" style={{backgroundImage: "url(" + fbimg + ")"}}></div>
+                        <div className="footerInnerLeftBottomInstaLogo" style={{backgroundImage: "url(" + inimg + ")"}}></div>
                     </div>
                 </div>
                 <div className="footerInnerRight">
