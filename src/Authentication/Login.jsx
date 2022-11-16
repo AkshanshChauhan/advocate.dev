@@ -1,9 +1,9 @@
 import "./login.scss";
 import React from "react";
 
-function Login() {
+function Login(info) {
     return (
-        <div className="loginBox">
+        <div className="loginBox" style={{top: info.top + "%"}}>
             <div className="loginInnerSection">
                 <div className="loginInnerTop">
                     <h2>Mobile no</h2>

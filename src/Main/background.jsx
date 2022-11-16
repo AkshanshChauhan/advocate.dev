@@ -2,13 +2,13 @@ import "./main.scss";
 import React from "react";
 import Login from "../Authentication/Login";
 
-function HomeBackground() {
+function Background(get) {
     return (
         <>
-            <div className="homeBackground"></div>
-            <Login />
+            <div className="homeBackground" style={{backgroundImage: "url(" + get.backgroundImage + ")", height: get.height}}></div>
+            <Login top={get.top} />
         </>
     )
 }
 
-export default HomeBackground;
+export default Background;

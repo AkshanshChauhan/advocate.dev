@@ -1,7 +1,8 @@
 .footer {
     display: grid;
-    width: calc(100% - 80px);
+    position: relative;
     padding: 60px 40px;
+    width: calc(100% - 80px);
     background-color: black;
 
     .footerInner {
