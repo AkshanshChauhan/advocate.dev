@@ -1,16 +1,16 @@
 import React from "react";
 import NavBar from "../NavBar";
 import HomePage from "./homePage";
-import bg1 from "../Images/background1.svg";
-import bg2 from "../Images/background2.svg";
-import bg3 from "../Images/background3.svg";
-import bg4 from "../Images/background4.svg";
 import Background from "./background";
 import Lawyers from "../Pages/Lawyers";
 import Contact from "../Pages/Contact";
 import MyProfile from "../Pages/MyProfile";
 import Affidavit from "../Pages/Affidavit";
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import bg1 from "../Images/background1.svg";
+import bg2 from "../Images/background2.svg";
+import bg3 from "../Images/background3.svg";
+import bg4 from "../Images/background4.svg";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function Home() {
     return (

@@ -10,6 +10,9 @@ import OurVision from "./ourVision";
 import OurProcess from "./ourProcess";
 import ourVision from "../Images/ourVision.svg";
 import RealClientReview from "./realClientReview";
+import bigCardBg1 from "../Images/bigCardBg1.svg";
+import bigCardBg2 from "../Images/bigCardBg2.svg";
+import bigCardBg3 from "../Images/bigCardBg3.svg";
 import profileImage from "../Images/profileImage.svg";
 import profileImage2 from "../Images/profileImage2.svg";
 import profileImage3 from "../Images/profileImage3.svg";
@@ -28,7 +31,8 @@ function ButtonTem(vl) {
 
 function HomePage() {
     const json = [
-        {
+        {   
+            background: bigCardBg1,
             profileImage: profileImage,
             name: "Akshansh",
             location: "Uttrakhand , India",
@@ -38,6 +42,7 @@ function HomePage() {
             charge: 10000
         },
         {
+            background: bigCardBg2,
             profileImage:profileImage2,
             name: "Reema",
             location: "Rajasthan, India",
@@ -47,6 +52,7 @@ function HomePage() {
             charge: 547
         },
         {
+            background: bigCardBg3,
             profileImage: profileImage3,
             name: "Aman",
             location: "Delhi, India",
@@ -56,6 +62,7 @@ function HomePage() {
             charge: 1452
         },
         {
+            background: bigCardBg1,
             profileImage: profileImage,
             name: "Naveen",
             location: "Uttrakhand, India",
@@ -65,6 +72,7 @@ function HomePage() {
             charge: 745
         },
         {
+            background: bigCardBg2,
             profileImage: profileImage2,
             name: "Surbi",
             location: "Bihar, India",
@@ -74,6 +82,7 @@ function HomePage() {
             charge: 900
         },
         {
+            background: bigCardBg3,
             profileImage: profileImage3,
             name: "Zafri",
             location: "West Bengal, India",
@@ -83,6 +92,7 @@ function HomePage() {
             charge: 2000
         },
         {
+            background: bigCardBg1,
             profileImage: profileImage,
             name: "Sumit",
             location: "Uttrakhand, India",
@@ -92,6 +102,7 @@ function HomePage() {
             charge: 745
         },
         {
+            background: bigCardBg2,
             profileImage: profileImage2,
             name: "Lancy",
             location: "Bihar, India",
@@ -101,6 +112,7 @@ function HomePage() {
             charge: 900
         },
         {
+            background: bigCardBg3,
             profileImage: profileImage3,
             name: "Kumar",
             location: "West Bengal, India",
@@ -136,7 +148,7 @@ function HomePage() {
             <div className="cards">
                 {json.map((e, k)=>
                     <BigCard 
-                        bgurl={profileImage} 
+                        bgurl={e.background} 
                         heading="What’s Coming for Legal Departments in 2022? (Adv.)" 
                         name="Akshansh" 
                         date="Febuary 3, 2022" 
