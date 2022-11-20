@@ -9,9 +9,9 @@
     margin: 0px 10%;
     position: absolute;
     border-radius: 10px;
-    backdrop-filter: blur(20px);
     grid-auto-flow: column;    
     width: calc(80% - 4rem);
+    backdrop-filter: blur(20px);
     justify-content: space-evenly;
     outline: 1px solid rgb(203, 203, 203);
     background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.534));
@@ -52,6 +52,115 @@
 
             .hoLine {
                 border-right: 1px solid #707070;
+            }
+        }
+    }
+}
+
+.otpSection {
+    top: 0px;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000001f;
+
+    .otp {
+        height: 50vh;
+        display: flex;
+        min-width: 500px;
+        min-height: 350px;
+        width: fit-content;
+        background-color: white;
+
+        .otpLeft {
+            width: 200px;
+            padding: 40px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("./imgs/otpbg.svg");
+
+            .otpLeftInnerLogo {
+                height: 100px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url("../Images/mainLogo.svg");
+            }
+
+            .otpLeftInnerBottomTextArea {
+                height: 70%;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+
+                .otpLeftInnerBottomText {
+                    color: white;
+                    font-weight: 600;
+                    font-size: larger;
+                }
+            }
+        }
+
+        .otpRight {
+            width: 300px;
+            padding: 20px;
+            display: grid;
+            align-content: flex-start;
+
+            .otpRightCrossSection {
+                display: flex;
+                justify-content: right;
+
+                .otpRightCross {
+                    cursor: pointer;
+                    transform: scaleX(160%) scaleY(120%);
+                }
+            }
+
+            .otpRightHeading {
+                font-weight: 600;
+                font-size: x-large;
+                margin-bottom: 10px;
+            }
+
+            .otpRightSubHeading {
+                font-size: small;
+                color: #999999;
+                margin-bottom: 20px;
+
+                u {
+                    color: #E27D00;
+                }
+            }
+
+            .otpInputSection {
+                display: flex;
+                margin-bottom: 20px;
+                justify-content: space-evenly;
+
+                .otpInput {
+                    width: 10px;
+                    border: 0px;
+                    outline: 0px;
+                    padding: 10px;
+                    text-align: center;
+                    border-bottom: 1px solid black;
+                }
+
+                .otpInput:focus {
+                    border-bottom: 2px solid black;
+                }
+            }
+
+            .otpButton {
+                padding: 10px;
+                border: 0px;
+                outline: 0px;
+                border-radius: 50px;
+                background-color: #FFCD6C;
             }
         }
     }
