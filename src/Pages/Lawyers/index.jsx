@@ -32,19 +32,20 @@ function ThisTop(data) {
 
 function Lawyers(info) {
     const [clickIndex, setClickIndex] = useState(0);
+    const subText = "A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence."
     return (
         <div className="lawyersPage">
             <Background backgroundImage={info.backgroundImage} height={info.height} top={info.top} />
             <TopHead heading={"PREFERENCES"} />
             <Pref clickCheck={setClickIndex} />
-            { clickIndex===1 ? <ThisTop srcImg={img1} head="SEXUAL OFFENCES LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===2 ? <ThisTop srcImg={img2} head="BAIL LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===3 ? <ThisTop srcImg={img3} head="INTERNET CRIME LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===4 ? <ThisTop srcImg={img4} head="DOMESTIC OFFENCES LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===5 ? <ThisTop srcImg={img5} head="YOUTH CHARGES LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===6 ? <ThisTop srcImg={img6} head="FIREARM & WEAPONS LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===7 ? <ThisTop srcImg={img7} head="ASSAULTS & THREATS LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
-            { clickIndex===8 ? <ThisTop srcImg={img8} head="PROPERTY, FRAUD & THEFT LAWYERS" sub="A team of highly skilled Calgary criminal lawyers dedicated to defending you with a smart, assertive, strategic, defence." /> : ""}
+            { clickIndex===1 ? <ThisTop srcImg={img1} head="SEXUAL OFFENCES LAWYERS" sub={subText} /> : ""}
+            { clickIndex===2 ? <ThisTop srcImg={img2} head="BAIL LAWYERS" sub={subText} /> : ""}
+            { clickIndex===3 ? <ThisTop srcImg={img3} head="INTERNET CRIME LAWYERS" sub={subText} /> : ""}
+            { clickIndex===4 ? <ThisTop srcImg={img4} head="DOMESTIC OFFENCES LAWYERS" sub={subText} /> : ""}
+            { clickIndex===5 ? <ThisTop srcImg={img5} head="YOUTH CHARGES LAWYERS" sub={subText} /> : ""}
+            { clickIndex===6 ? <ThisTop srcImg={img6} head="FIREARM & WEAPONS LAWYERS" sub={subText} /> : ""}
+            { clickIndex===7 ? <ThisTop srcImg={img7} head="ASSAULTS & THREATS LAWYERS" sub={subText} /> : ""}
+            { clickIndex===8 ? <ThisTop srcImg={img8} head="PROPERTY, FRAUD & THEFT LAWYERS" sub={subText} /> : ""}
             <div className="cards">
                 {arr.map((e,i)=><Card key={i}/>)}
             </div>
