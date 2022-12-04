@@ -1,8 +1,8 @@
 .navbar {
     top: 0px;
+    z-index: 10;
     width: 100vw;
     position: fixed;
-    z-index: 10;
     background: linear-gradient(90deg, black, rgba(128, 128, 128, 0.639), black);
 
     .upperNav {
@@ -42,6 +42,38 @@
             font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
+
+            .myProfileLinks {
+                gap: 30px;
+                padding:40px;
+                display: grid;
+                margin-top: 30px;
+                position: absolute;
+                border-radius: 10px;
+                background-color: white;
+
+                .myProfileLink {
+                    gap: 20px;
+                    display: flex;
+                    color: #404040;
+                    font-weight: 400;
+                    font-size: medium;
+                    align-items: center;
+                    text-decoration: none;
+                }
+
+                .myProfileLink:hover {
+                    color: rgb(96, 96, 96);
+                }
+
+                .myProfileBtn {
+                    color: white;
+                    font-weight: 550;
+                    padding: 10px 0px;
+                    border-radius: 50px;
+                    background-color: black;
+                }
+            }
         }
     }
 }
