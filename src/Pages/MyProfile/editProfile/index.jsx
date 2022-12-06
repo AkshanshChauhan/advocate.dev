@@ -15,7 +15,7 @@ export default function EditProfile(info) {
                 <div className="editProfile">
                     <div className="editProfileHead">Edit Profile</div>
                     <div className="dpsection">
-                        <img className="editProfileDP" src={editProfileDP} width={150} height={150} />
+                        <img className="editProfileDP" src={editProfileDP} width={150} height={150} alt={"editprofile dp"} />
                         <input type="file" id="hs" accept="image/*" hidden/>
                         <div style={{width: "40px", height: "40px", backgroundColor: "gray", borderRadius: "50%", backgroundImage: "url(" + camera + ")", backgroundPosition: "center", backgroundSize: 60, backgroundRepeat: "no-repeat", position: "absolute", bottom: 0, transform: "translateX(50px)", cursor: "pointer"}} onClick={()=>document.getElementById("hs").click()}></div>
                     </div>
