@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import React, { useEffect, useState } from "react";
 import { checkOptClickedAgainAction, checkLoginAction} from "../Redux/Actions/login";
 
-export default function Otp() {
+export default function Otp(info) {
     const otpInp1 = useRef();
     const otpInp2 = useRef();
     const otpInp3 = useRef();
@@ -17,6 +17,37 @@ export default function Otp() {
     const mainOtpVar = otp1 + "" + otp2 + "" + otp3 + "" + otp4;
     useEffect(()=>setMainOtp(mainOtpVar), [mainOtpVar]);
     const dispatch = useDispatch();
+
+    const verifyOtp = ()=> {
+        var formdata = new FormData();
+        formdata.append("mobile", info.num);
+        formdata.append("used_for", "register");
+        formdata.append("otp_sent", mainOtpVar);
+
+        var requestOptions = {
+            method: 'POST',
+            body: formdata,
+            redirect: 'follow'
+        };
+
+        fetch("https://api.theonlineattorney.in/api/v1/validate-otp-phoneno/", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                if(result.status === true) {
+                    dispatch(checkLoginAction()); 
+                    dispatch(checkOptClickedAgainAction());
+                    alert(result.detail)
+                } else {
+                    otpInp1.current.value = null;
+                    otpInp2.current.value = null;
+                    otpInp3.current.value = null;
+                    otpInp4.current.value = null;
+                    alert(result.detail)
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
     return (
         <div className="otpSection">
             <div className="otp">
@@ -45,7 +76,7 @@ export default function Otp() {
                         <input className="otpInput" type="rel" maxLength={1} ref={otpInp3} onChange={(e)=>{e.target.value.length>0 ? otpInp4.current.focus() : otpInp2.current.focus(); setOtpInp3(e.target.value)}} />
                         <input className="otpInput" type="rel" maxLength={1} ref={otpInp4} onChange={(e)=>{e.target.value.length>0 ? otpInp4.current.blur() : otpInp3.current.focus(); setOtpInp4(e.target.value)}} />
                     </div>
-                    <button className="otpButton" onClick={()=>{dispatch(checkLoginAction()); dispatch(checkOptClickedAgainAction())}} disabled={mainOtp.length===4 ? false : true}>Verify OTP</button>
+                    <button className="otpButton" onClick={()=>verifyOtp()} disabled={mainOtp.length===4 ? false : true}>Verify OTP</button>
                 </div>
             </div>
         </div>

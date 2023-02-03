@@ -28,7 +28,7 @@ function NavBar() {
                 <div className="navLinks" style={{cursor: 'pointer'}} onMouseOver={()=>setMyProfVis(false)}>MY PROFILE
                     <div className="myProfileLinks" style={myProfVis ? {display: 'none'} : {display: 'grid'}} onMouseLeave={()=>setMyProfVis(true)}>
                         <Link className="myProfileLink" to={"/myprofile/edit-profile"}><img src={mpic1} alt="myProfileIcon1" width={25} /> Edit Profile</Link>
-                        <Link className="myProfileLink" to={"/myprofile/payments"}><img src={mpic2} alt="myProfileIcon2" width={25} /> Payments</Link>
+                        <Link className="myProfileLink" to={"/myprofile/payment"}><img src={mpic2} alt="myProfileIcon2" width={25} /> Payments</Link>
                         <Link className="myProfileLink" to={"/myprofile/help-and-support"}><img src={mpic3} alt="myProfileIcon3" width={25} /> Help & Support</Link>
                         <Link className="myProfileLink" to={"/myprofile/wishlist"}><img src={mpic4} alt="myProfileIcon4" width={25} /> Wishlist</Link>
                         <Link className="myProfileLink" to={"/myprofile/wallet"}><img src={mpic5} alt="myProfileIcon5" width={25} /> Wallet</Link>

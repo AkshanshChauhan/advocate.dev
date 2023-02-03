@@ -3,7 +3,7 @@ import Otp from "./Otp";
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { checkOptClickedAction} from "../Redux/Actions/login";
+import { checkOptClickedAction } from "../Redux/Actions/login";
 
 function Login(info) {
     const dispatch = useDispatch();
@@ -11,12 +11,37 @@ function Login(info) {
     const [number, setNumber] = useState("");
     const login = useSelector(state => state.checkLogin);
     const callOtp = useSelector(state => state.checkOptClicked);
+
+    const loginFunction = ()=> {
+        var formdata = new FormData();
+        formdata.append("mobile", number);
+        formdata.append("used_for", "register");
+
+        var requestOptions = {
+            method: 'POST',
+            body: formdata,
+            redirect: 'follow'
+        };
+
+        fetch("https://api.theonlineattorney.in/api/v1/validate-phoneno/", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                if(result.status === true) {
+                    alert(result.message)
+                    dispatch(checkOptClickedAction());
+                } else {
+                    alert(result.detail)
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
     return (
         <>
             {
                 callOtp ?
                 null :
-                <Otp />
+                <Otp num={number} />
             }
             { login ?
                 null :
@@ -26,7 +51,7 @@ function Login(info) {
                             <h2>Mobile no</h2>
                         </div>
                         <div className="loginInnerBottom">
-                            <input type={"tel"} placeholder={"Mobile no"} onChange={(e)=>setName(e.target.value)} />
+                            <input type={"tel"} placeholder={"Mobile no"} onChange={(e)=>setNumber(e.target.value)} />
                             <span className="inputPrefix">+91(IN)</span>
                         </div>
                     </div>
@@ -35,12 +60,12 @@ function Login(info) {
                             <h2>Name</h2>
                         </div>
                         <div className="loginInnerBottom">
-                            <input type={"text"} placeholder={"Enter Your Name"} onChange={(e)=>setNumber(e.target.value)} />
+                            <input type={"text"} placeholder={"Enter Your Name"} onChange={(e)=>setName(e.target.value)} />
                         </div>
                     </div>
                     <div className="loginInnerSectionEnd" style={{width: "20vw", display: "grid", gap: 10}}>
                         <div className="loginInnerTop">
-                            <button style={{padding: "1rem", backgroundColor: "#FFCD6C", fontWeight: "600", border: "0px", outline: "0px", borderRadius: "50px", width: "20vw"}} onClick={()=>dispatch(checkOptClickedAction())} disabled={name.length===0 || number.length===0 ? true : false}>Sign Up</button>
+                            <button style={{padding: "1rem", backgroundColor: "#FFCD6C", fontWeight: "600", border: "0px", outline: "0px", borderRadius: "50px", width: "20vw"}} onClick={()=>loginFunction()} disabled={name.length!==0 && number.length===10 ? false : true}>Sign Up</button>
                         </div>
                         <div className="loginInnerBottom">
                             <div style={{width: "20vw", display: "grid", gridAutoFlow: "column", gap: "10px"}}>

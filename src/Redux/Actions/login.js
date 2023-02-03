@@ -1,16 +1,16 @@
-export const checkLoginAction = ()=> {
+export const checkLoginAction = () => {
     return {
         type: 'LOGIN'
     }
 }
 
-export const checkOptClickedAction = ()=> {
+export const checkOptClickedAction = () => {
     return {
         type: 'OTPCLICKED'
     }
 }
 
-export const checkOptClickedAgainAction = ()=> {
+export const checkOptClickedAgainAction = () => {
     return {
         type: 'OTPCLICKEDAG'
     }

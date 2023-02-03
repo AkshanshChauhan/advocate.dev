@@ -3,8 +3,8 @@ import checkLoginReducer from './login';
 import checkOtpClickedReducer from './opt';
 
 const allReducers = combineReducers({
-    checkLogin : checkLoginReducer,
-    checkOptClicked : checkOtpClickedReducer,
+    checkLogin: checkLoginReducer,
+    checkOptClicked: checkOtpClickedReducer,
 })
 
 export default allReducers;

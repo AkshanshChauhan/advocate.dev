@@ -1,8 +1,9 @@
 import React from "react";
-import Background from "../../../Main/background";
-import camera from "../imgs/camera.svg";
-import editProfileDP from "../imgs/editProfileDP.svg";
 import "../../page.main.scss";
+import camera from "../imgs/camera.svg";
+import Background from "../../../Main/background";
+import editProfileDP from "../imgs/editProfileDP.svg";
+
 import { useState } from "react";
 
 export default function EditProfile(info) {

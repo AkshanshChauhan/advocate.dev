@@ -1,4 +1,4 @@
-const checkOtpClickedReducer = (state=true, action) => {
+const checkOtpClickedReducer = (state = true, action) => {
     switch (action.type) {
         case 'OTPCLICKED':
             return false
