@@ -18,34 +18,66 @@ export default function Otp(info) {
     useEffect(()=>setMainOtp(mainOtpVar), [mainOtpVar]);
     const dispatch = useDispatch();
 
+    var formdata = new FormData();
+    var requestOptions = {};
     const verifyOtp = ()=> {
-        var formdata = new FormData();
-        formdata.append("mobile", info.num);
-        formdata.append("used_for", "register");
-        formdata.append("otp_sent", mainOtpVar);
+        if(info.useFor === "login") {
+            formdata.append("mobile", info.num);
+            formdata.append("used_for", "login");
+            formdata.append("otp_sent", mainOtpVar);
 
-        var requestOptions = {
-            method: 'POST',
-            body: formdata,
-            redirect: 'follow'
-        };
+            requestOptions = {
+                method: 'POST',
+                body: formdata,
+                redirect: 'follow'
+            };
 
-        fetch("https://api.theonlineattorney.in/api/v1/validate-otp-phoneno/", requestOptions)
-            .then(response => response.json())
-            .then(result => {
-                if(result.status === true) {
-                    dispatch(checkLoginAction()); 
-                    dispatch(checkOptClickedAgainAction());
-                    alert(result.detail)
-                } else {
-                    otpInp1.current.value = null;
-                    otpInp2.current.value = null;
-                    otpInp3.current.value = null;
-                    otpInp4.current.value = null;
-                    alert(result.detail)
-                }
-            })
-            .catch(error => console.log('error', error));
+            fetch("https://api.theonlineattorney.in/api/v1/validate-otp-phoneno/", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if(result.msg === "Login Successful") {
+                        alert(result.msg)
+                        dispatch(checkLoginAction()); 
+                        dispatch(checkOptClickedAgainAction());
+                        localStorage.setItem("token", result.token.access);
+                    } else {
+                        otpInp1.current.value = null;
+                        otpInp2.current.value = null;
+                        otpInp3.current.value = null;
+                        otpInp4.current.value = null;
+                        alert(result.message)
+                    }
+                })
+                .catch(error => console.log('error', error));
+        } else {
+            formdata.append("mobile", info.num);
+            formdata.append("used_for", "register");
+            formdata.append("otp_sent", mainOtpVar);
+
+            requestOptions = {
+                method: 'POST',
+                body: formdata,
+                redirect: 'follow'
+            };
+
+            fetch("https://api.theonlineattorney.in/api/v1/validate-otp-phoneno/", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if(result.msg === "Login Successful") {
+                        alert(result.msg)
+                        dispatch(checkLoginAction()); 
+                        dispatch(checkOptClickedAgainAction());
+                        localStorage.setItem("token", result.token.access);
+                    } else {
+                        otpInp1.current.value = null;
+                        otpInp2.current.value = null;
+                        otpInp3.current.value = null;
+                        otpInp4.current.value = null;
+                        alert(result.message)
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
     }
 
     return (

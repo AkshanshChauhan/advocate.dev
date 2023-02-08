@@ -12,14 +12,12 @@
     display: grid;
     position: relative;
     justify-items: center;
-
     .ourProcessInner {
         width: 80%;
         display: flex;
         margin-top: 150px;
         outline: 2px solid #CBCBCB;
         justify-content: space-evenly;
-
         .ourProcessInnerSection {
             gap: 5px;
             width: 200px;
@@ -28,12 +26,10 @@
             justify-items: center;
             transform: translateY(-35%);
         }
-
         .processImage {
             width: 100px;
         }
     }
-
     .affidavit {
         display: grid;
         padding: 50px;
@@ -41,7 +37,6 @@
         width: calc(100% - 100px);
         background-repeat: no-repeat;
         background-image: url("../Images/affidavitBg.svg");
-
         .affidavitProcessBox {
             gap: 10px;
             display: flex;
@@ -50,25 +45,21 @@
             margin-bottom: 40px;
             align-items: center;
             justify-content: center;
-
             .affidavitProcess {
                 gap: 10px;
                 width: 150px;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-
                 h3 {
                     font-weight: 400;
                 }
-
                 .affidavitProcessIcon {
                     width: 100px;
                     height: 100px;
                     background-size: cover;
                 }
             }
-
             .affidavitProcessArrow {
                 width: 50px;
                 height: 50px;
@@ -76,18 +67,22 @@
                 background-repeat: no-repeat;
             }
         }
-
-        .affidavitButton {
-            border: 0px;
-            outline: 0px;
-            font-weight: 500;
-            padding: 15px 40px;
-            border-radius: 10px;
-            justify-self: center;
-            background-color: #FFCD6C;
+        .linkButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            .affidavitButton {
+                border: 0px;
+                outline: 0px;
+                font-weight: 500;
+                padding: 15px 40px;
+                border-radius: 10px;
+                justify-self: center;
+                background-color: #FFCD6C;
+            }
         }
     }
-
     .cards {
         gap: 10px;
         width: 100%;
@@ -97,21 +92,18 @@
         align-items: center;
         justify-content: center;
     }
-    
     .realClientReview {
         width: 100%;
         margin: 40px 0px;
         display: grid;
         padding: 20px 0px;
         background-color: #E5E9EA;
-    
         .realClientReviewTop {
             gap: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-    
         .realClientReviewSections {
             gap: 20px;
             display: flex;
@@ -119,7 +111,6 @@
             margin: 20px 0px;
             align-content: center;
             justify-content: center;
-    
             .realClientReviewSection {
                 width: 28%;
                 padding: 40px;
@@ -127,7 +118,6 @@
             }
         }
     }
-    
     .ourVisionSection {
         gap: 10px;
         width: 100%;
@@ -137,25 +127,21 @@
         flex-direction: column;
         justify-content: center;
     }
-
     .troubleSection {
         gap: 50px;
         display: grid;
         margin: 100px 0px;
-
         .troubleSectionSteps {
             gap: 40px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            
             .troubleSectionStep {
                 gap: 10px;
                 width: 250px;
                 padding: 40px;
                 display: grid;
                 align-content: flex-start;
-
                 p {
                     color: #838596;
                 }
@@ -164,11 +150,19 @@
     }
 }
 
+.userInformation {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @keyframes pageLoad {
     0% {
         opacity: 1;
     }
-
     100% {
         opacity: 0;
     }

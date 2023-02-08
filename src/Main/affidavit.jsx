@@ -1,5 +1,6 @@
 import "./main.scss";
 import React from "react";
+import { Link } from "react-router-dom";
 import TopHead from "./topHead";
 import AffidavitIcon1 from "../Images/affidavit1.svg";
 import AffidavitIcon2 from "../Images/affidavit2.svg";
@@ -26,7 +27,7 @@ function Affidavit() {
                     <h3>Document</h3>
                 </div>
             </div>
-            <button className="affidavitButton">Create an Affidavit</button>
+            <Link to={"/affidavit"} className="linkButton"><button className="affidavitButton">Create an Affidavit</button></Link>
         </div>
     )
 }

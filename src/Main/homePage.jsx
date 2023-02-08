@@ -1,5 +1,6 @@
 import "./main.scss";
 import React from "react";
+import {useState, useEffect} from "react";
 import Card from "../Card";
 import Footer from "../Footer";
 import TopHead from "./topHead";
@@ -123,6 +124,28 @@ function HomePage() {
         }
     ];
 
+    const [allUsers, setAllUsers] = useState([]);
+
+    const getAllUsersData = ()=>{
+        const  requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+    
+        fetch("https://api.theonlineattorney.in/api/v1/all_profile/", requestOptions)
+            .then(response => response.json())
+            .then((result) => {
+                    setAllUsers(result);
+                }
+            )
+            .catch(error => console.log('error', error));
+    }
+
+    useEffect(()=>{
+        getAllUsersData();
+    },[]);
+
+
     return (
         <div className="homePage">
             <TopHead 
@@ -131,15 +154,16 @@ function HomePage() {
             />
             <OurProcess />
             <div className="cards">
-                {json.map((e, k)=>
+                {allUsers.map((e, k)=>
                     <Card 
-                        profileImage={e.profileImage}
-                        name={e.name}
-                        location={e.location}
-                        ratting={e.retting}
-                        works={e.works}
-                        reviews={e.reviews}
-                        charge={e.charge}
+                        profileImage={"https://api.theonlineattorney.in" + e.profile_pic}
+                        name={e.first_name}
+                        location={e.state + ", " + e.city}
+                        ratting={e.rating}
+                        works={e.work}
+                        reviews={e.review}
+                        charge={e.advocate_charge}
+                        id={e.id}
                         key={k}
                     />
                 )}
@@ -149,9 +173,9 @@ function HomePage() {
                 {json.map((e, k)=>
                     <BigCard 
                         bgurl={e.background} 
-                        heading="What’s Coming for Legal Departments in 2022? (Adv.)" 
+                        heading="What’s Coming for Legal Departments in 2023? (Adv.)" 
                         name="Akshansh" 
-                        date="Febuary 3, 2022" 
+                        date="February 8, 2023" 
                         content="Corporate legal departments have seen some significant  changes over the past couple of years. The ongoing explosion of data volumes and rapid adoption of new communications technologies have made e-discovery operations more complex and expensive to manage, convincing many departments to move operations in-house. The requirements of privacy regulations, and the data inventory, discovery, and production capabilities necessary to meet......"
                         key={k}
                     />

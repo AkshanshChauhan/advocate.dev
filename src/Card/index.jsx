@@ -16,7 +16,7 @@ function Card(info) {
                     </div>
                     <div className="innerUpperCardMidBottom">
                         <div>
-                            <p className="small">Ratting</p>
+                            <p className="small">Rating</p>
                             <h2 className="supText">{info.ratting}</h2>
                         </div>
                         <div>
@@ -36,7 +36,9 @@ function Card(info) {
                     <h3 className="supText">₹ {info.charge}/Min</h3>
                     <br></br>
                 </div>
-                <button className="viewButton">View</button>
+                <button className="viewButton" onClick={()=>{
+                    window.location.href = "/user/" + info.id;
+                }}>View</button>
             </div>
         </div>
     )
