@@ -12,37 +12,42 @@
     border-radius: 10px;
     outline: 1px solid #E3E3E3;
     background-color: #F9F9F9;
-
     .upperCard {
         gap: 10px;
         display: flex;
-
         .innerUpperCardLeft {
             padding: 60px;
             border-radius: 10px;
             background-size: cover;
             background-color: rgb(255, 255, 255);
         }
-
         .innerUpperCardMid {
             gap: 10px;
             width: 100%;
             display: grid;
-
             .innerUpperCardMidTop {
                 display: flex;
+                .heart-like {
+                    border: 0px;
+                    padding: 20px;
+                    cursor: pointer;
+                    margin-left: auto;
+                    height: fit-content;
+                    background-size: cover;
+                    background-color: #F9F9F9;
+                    background-image: url("../Images/heart-fill.png");
+                }
                 .heart {
                     border: 0px;
                     padding: 20px;
+                    cursor: pointer;
                     margin-left: auto;
                     height: fit-content;
                     background-size: cover;
                     background-color: #F9F9F9;
                     background-image: url("../Images/heart.svg");
                 }
-                
             }
-
             .innerUpperCardMidBottom {
                 gap: 10px;
                 width: 80%;
@@ -52,17 +57,13 @@
                 background-color: #F6E9CF;
                 justify-content: space-evenly;
             }
-
         }
     }
-
     .lowerCard {
         display: flex;
-
         .innerLowerCardLeft {
             width: 80%;
         }
-
         .viewButton {
             height: fit-content;
             width: 20%;

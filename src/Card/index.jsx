@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./card.scss";
 
 function Card(info) {
+    const [likeBool, setLikeBool] = useState(false);
+
+    function like(id) {
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
+    
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+    
+        fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${likeBool ? "dislike" : "like"}`, requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                if(result.status === true) {
+                    likeBool ? setLikeBool(false) : setLikeBool(true);
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
     return (
         <div className="card">
             <div className="upperCard">
@@ -12,7 +34,7 @@ function Card(info) {
                             <h3 className="supText">{info.name}</h3>
                             <p className="subText">{info.location}</p>
                         </div>
-                        <button className="heart"></button>
+                        <button className={likeBool ? "heart-like" : "heart"} onClick={()=>like(info.id)}></button>
                     </div>
                     <div className="innerUpperCardMidBottom">
                         <div>
