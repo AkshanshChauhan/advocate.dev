@@ -26,8 +26,6 @@ function Pref(info) {
         getAllOps();
     }, [])
 
-    console.log(allOps)
-
     function ButtonOps(data) {
         return (
             <button className="prefLinkBtn" onClick={()=>info.clickCheck(data.index)}></button>

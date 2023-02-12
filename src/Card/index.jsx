@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./card.scss";
 
 function Card(info) {
     const [likeBool, setLikeBool] = useState(false);
+
+    useEffect(()=>{
+        info.isLike ? setLikeBool(true) : setLikeBool(false);
+    }, []);
 
     function like(id) {
         var myHeaders = new Headers();
@@ -17,7 +21,7 @@ function Card(info) {
         fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${likeBool ? "dislike" : "like"}`, requestOptions)
             .then(response => response.json())
             .then(result => {
-                if(result.status === true) {
+                if(result.status) {
                     likeBool ? setLikeBool(false) : setLikeBool(true);
                 }
             })

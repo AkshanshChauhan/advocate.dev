@@ -162,8 +162,9 @@ function HomePage() {
                         ratting={e.rating}
                         works={e.work}
                         reviews={e.review}
-                        charge={e.advocate_charge}
+                        charge={e.charge}
                         id={e.id}
+                        isLike={e.islike}
                         key={k}
                     />
                 )}

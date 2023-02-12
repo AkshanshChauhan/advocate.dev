@@ -13,6 +13,7 @@ import bg2 from "../Images/background2.svg";
 import bg3 from "../Images/background3.svg";
 import bg4 from "../Images/background4.svg";
 import bg5 from "../Images/background5.svg";
+import Wallet from "../Pages/MyProfile/wallet";
 import Payment from "../Pages/MyProfile/payment";
 import EditProfile from "../Pages/MyProfile/editProfile";
 import { checkLoginAction } from "../Redux/Actions/login";
@@ -62,6 +63,7 @@ function Main() {
                 <Route path="/myprofile" element={<MyProfile backgroundImage={bg2} height={500} top={60} />} />       
                 <Route path="/myprofile/edit-profile" element={<EditProfile backgroundImage={bg5} height={400} top={60} />} /> 
                 <Route path="/myprofile/payment" element={<Payment backgroundImage={bg5} height={400} top={60} />} />
+                <Route path="/myprofile/wallet" element={<Wallet height={400} top={60} />} />
                 <Route path="/user/:id" element={<User/>}/>
             </Routes>
         </BrowserRouter>
