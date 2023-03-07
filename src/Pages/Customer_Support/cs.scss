@@ -1,0 +1,46 @@
+.customer-support {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+        font-size: xx-large;
+        color: black;
+    }
+    .sub-heading {
+        width: 50vw;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: small;
+        color: #8B9B9F;
+    }
+    .cs-img {
+        width: 400px;
+        height: 250px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("./img/img.svg");
+    }
+    .solutions {
+        display: flex;
+        padding: 10px;
+        gap: 5px;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        background-color: #F9F8F5;
+        .solution-heading {
+            font-weight: 700;
+            padding: 20px;
+            background-color: white;
+        }
+        .solution {
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .solution:hover {
+            background-color: #f1f1f1;
+        }
+    }
+}

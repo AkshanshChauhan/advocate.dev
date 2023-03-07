@@ -1,0 +1,72 @@
+.payment {
+    background-color: #F5F9FF;
+    display: flex;
+    padding: 40px;
+    gap: 10px;
+    .payment-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .payment-heading {}
+        .payment-sub-heading {
+            color: #5E5E5E;
+        }
+        .pm-box {
+            gap: 2px;
+            padding: 40px;
+            display: flex;
+            border-radius: 10px;
+            flex-direction: column;
+            background-color: white;
+            outline: 1px solid #9D9D9D;
+            .title {
+                font-weight: 600;
+            }
+            .star-num {
+                font-weight: 600;
+            }
+            .small-name {
+                font-size: small;
+                font-weight: 600;
+            }
+            .small-expire {
+                font-size: small;
+                color: #888888;
+            }
+        }
+        .flat-card {
+            padding: 20px;
+            background-color: white;
+            display: flex;
+            gap: 10px;
+            .icon {
+                padding: 15px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .title {
+                font-weight: 600;
+            }
+        }
+    }
+    .payment-right {
+        width: 50%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        .long-card {
+            text-align: right;
+            display: flex;
+            padding: 20px;
+            font-weight: 600;
+            background-color: white;
+            justify-content: space-between;
+            .amount {
+                p {
+                    color: #B67801;
+                }
+            }
+        }
+    }
+}

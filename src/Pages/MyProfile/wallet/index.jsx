@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./wallet.style.scss";
 
+import Background from "../../../Main/background";
+
+import bg1 from "../../../Images/background5.svg";
+
 const rechargePackJSON = [50, 100, 200, 3000, 500, 1000, 2000, 40000, 5000, 10000, 20000, 50000];
 
 export default function Wallet(info) {
@@ -15,7 +19,9 @@ export default function Wallet(info) {
         )
     }
     return (
-        <div className="wallet" style={{top: 200}}>
+        <>
+        <Background backgroundImage={bg1} height={info.height} top={info.top}/>
+        <div className="wallet">
             <div className="walletNav">
                 <div className="walletLogo"></div>
                 <div className="walletRight">
@@ -59,5 +65,6 @@ export default function Wallet(info) {
             </div>
             <button className="button">PROCESS TO PAY</button>
         </div>
+        </>
     )
 }

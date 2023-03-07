@@ -6,7 +6,7 @@ function Card(info) {
 
     useEffect(()=>{
         info.isLike ? setLikeBool(true) : setLikeBool(false);
-    }, []);
+    });
 
     function like(id) {
         var myHeaders = new Headers();
@@ -18,11 +18,14 @@ function Card(info) {
             redirect: 'follow'
         };
     
-        fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${likeBool ? "dislike" : "like"}`, requestOptions)
+        fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${info.isLike ? "dislike" : "like"}`, requestOptions)
             .then(response => response.json())
             .then(result => {
-                if(result.status) {
-                    likeBool ? setLikeBool(false) : setLikeBool(true);
+                console.log(result, info.isLike);
+                if(info.isLike === true) {
+                    setLikeBool(false);
+                } else {
+                    setLikeBool(true);
                 }
             })
             .catch(error => console.log('error', error));

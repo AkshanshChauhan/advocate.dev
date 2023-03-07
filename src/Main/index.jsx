@@ -18,6 +18,8 @@ import Payment from "../Pages/MyProfile/payment";
 import EditProfile from "../Pages/MyProfile/editProfile";
 import { checkLoginAction } from "../Redux/Actions/login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Customer_Support from "../Pages/Customer_Support";
+import MyLoyality from "../Pages/MyProfile/my_loyality";
 
 function Home() {
     return (
@@ -64,6 +66,8 @@ function Main() {
                 <Route path="/myprofile/edit-profile" element={<EditProfile backgroundImage={bg5} height={400} top={60} />} /> 
                 <Route path="/myprofile/payment" element={<Payment backgroundImage={bg5} height={400} top={60} />} />
                 <Route path="/myprofile/wallet" element={<Wallet height={400} top={60} />} />
+                <Route path="/myprofile/help-and-support" element={<Customer_Support height={400} top={60} />} />
+                <Route path="/myprofile/my-loyalty-status" element={<MyLoyality height={400} top={60} />} />
                 <Route path="/user/:id" element={<User/>}/>
             </Routes>
         </BrowserRouter>
