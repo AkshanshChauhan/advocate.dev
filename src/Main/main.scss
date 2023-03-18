@@ -152,11 +152,132 @@
 
 .userInformation {
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    height: 2000px;
+    gap: 10px;
+    padding: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    .upper {
+        display: flex;
+        .left {
+            width: 50%;
+            .user-name {
+                text-align: left;
+                width: 100%;
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            .user-image-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                .user-image {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    height: 400px;
+                    width: 400px;
+                }
+            }
+            .user-charge-and-btn {
+                width: 400px;
+                justify-content: space-between;
+                display: flex;
+                .user-button-section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .user-contact {
+                        padding: 10px 80px;
+                        background-color: white;
+                        border: 0px;
+                        color: #E39D12;
+                        outline: 1px solid #E39D12;
+                        border-radius: 50px;
+                        font-weight: 600;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .rating {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .star {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .add-serv {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px;
+        gap: 40px;
+        .add-serv-card {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            display: grid;
+            border-radius: 5px;
+            border: 2px solid #CBCBCB;
+            .add-serv-icon {
+                width: 50px;
+                height: 50px;
+                justify-self: center;
+                background-image: url('../Images/addServ.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .price {
+                justify-self: right;
+            }
+            .title {
+                font-weight: 600;
+                text-align: center;
+            }
+            .description {
+                font-size: xx-small;
+                color: #838596;
+                text-align: center;
+            }
+        }
+    }
+    .exp-section {
+        display: grid;
+        gap: 20px;
+        border-top: 1px solid #C5C7D4;
+        .exp-heading {
+            border-top: 5px solid black;
+            width: fit-content;
+            font-weight: 700;
+            font-size: xx-large;
+        }
+        .exp-sub-heading {
+            font-size: x-large;
+            font-weight: 600;
+            color: #838596;
+        }
+        .exp-description {
+            font-size: small;
+            color: #838596;
+        }
+        .exp-sub {
+            color: #838596;
+        }
+    }
 }
 
 @keyframes pageLoad {

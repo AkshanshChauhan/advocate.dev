@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import User from "./user";
 import NavBar from "../NavBar";
 import HomePage from "./homePage";
@@ -20,6 +20,7 @@ import { checkLoginAction } from "../Redux/Actions/login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Customer_Support from "../Pages/Customer_Support";
 import MyLoyality from "../Pages/MyProfile/my_loyality";
+import Chat from "../Chat";
 
 function Home() {
     return (
@@ -69,6 +70,7 @@ function Main() {
                 <Route path="/myprofile/help-and-support" element={<Customer_Support height={400} top={60} />} />
                 <Route path="/myprofile/my-loyalty-status" element={<MyLoyality height={400} top={60} />} />
                 <Route path="/user/:id" element={<User/>}/>
+                <Route path="/chat" element={<Chat />}/>
             </Routes>
         </BrowserRouter>
     )
