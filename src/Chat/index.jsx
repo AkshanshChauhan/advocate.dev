@@ -22,7 +22,7 @@ export default function Chat() {
                 <div className="chatting-section"></div>
                 <div className="messaging-section">
                     <div className="clip-icon"></div>
-                    <input type="text" placeholder="Type something..." />
+                    <input type="text" placeholder="Type something..." suggestion="false"/>
                     <div className="send-icon"></div>
                 </div>
             </div>

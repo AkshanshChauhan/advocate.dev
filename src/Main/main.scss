@@ -152,7 +152,7 @@
 
 .userInformation {
     display: flex;
-    height: 2000px;
+    height: max-content;
     gap: 10px;
     padding: 40px;
     flex-direction: column;
@@ -258,6 +258,7 @@
     .exp-section {
         display: grid;
         gap: 20px;
+        margin-bottom: 40px;
         border-top: 1px solid #C5C7D4;
         .exp-heading {
             border-top: 5px solid black;
@@ -276,6 +277,60 @@
         }
         .exp-sub {
             color: #838596;
+        }
+    }
+    .review-section {
+        display: grid;
+        gap: 40px;
+        border-top: 1px solid #838596;
+        .review-heading {
+            font-size: xx-large;
+            font-weight: 700;
+            width: fit-content;
+            border-top: 5px solid black;
+        }
+        .review-map {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .review {
+                border-bottom: 1px solid #d2d2d2;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-bottom: 40px;
+                .name {
+                    font-size: larger;
+                    font-weight: 500;
+                }
+                .date {
+                    font-size: smaller;
+                    color: #90929C;
+                }
+                .inner-heading-section {
+                    display: flex;
+                    gap: 10px;
+                    .big-comma {
+                        width: 80px;
+                        height: 50px;
+                        background-image: url("../Images/bigComma.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                    .inner-heading {
+                        display: flex;
+                        align-items: flex-end;
+                        color: #8B9B9F;
+                        font-weight: 600;
+                        font-style: italic;
+                    }
+                }
+                .review-description {
+                    color: #AFA9A9;
+                    font-size: small;
+                    font-style: italic;
+                }
+            }
         }
     }
 }

@@ -23,8 +23,88 @@ export default function User() {
             })
             .catch(error => console.log('error', error));
     }
+    function setCount(val) {
+        setReviewCount(val)
+    }
+    const [count, setReviewCount] = useState();
+    const randomNames = ["Rohan", "Rahul", "Yaman", "Abhishek", "Anmol", "Lokesh", "Vinodh", "Daman", "Bobby"];
+    const reviewJson = {
+        reviews: [
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            },
+            {
+                name: randomNames[Math.round(Math.random()*9)],
+                date: "7 October 2021",
+                rating: "4.5",
+                title: "Charges withdrawn Peace Bond Rating",
+                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+            }
+        ]    
+    }
     useEffect(()=>{
         getIdData();
+        setCount(reviewJson.reviews.length);
     },[]);
     return(
         <div className="userInformation">
@@ -137,6 +217,26 @@ intensity and professionalism regardless of the charges they face.</div>
                 <div className="exp-sub-heading">Specialty Area</div>
                 <div className="exp-sub">Bail, Divorce, Homesite, Drugs Addict</div>
             </div>
+            </div>
+            <div className="review-section">
+                <div className="review-heading">REVIEWS ({count})</div>
+                <div className="review-map">
+                    {reviewJson.reviews.map((data)=>{
+                        return (                            
+                            <div className="review">
+                                <div>
+                                    <div className="name">{data.name}</div>
+                                    <div className="date">{data.date}</div>
+                                </div>
+                                <div className="inner-heading-section">
+                                    <div className="big-comma"></div>
+                                    <div className="inner-heading">{data.title}</div>
+                                </div>
+                                <div className="review-description">{data.description}</div>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
