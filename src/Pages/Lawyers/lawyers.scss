@@ -2,7 +2,6 @@
     width: 100%;
     margin: 50px 0px;
     height: fit-content;
-
     .prefLinks {
         gap: 10px;
         display: flex;
@@ -10,7 +9,6 @@
         overflow-x: scroll;
         overflow-y: hidden;
         justify-content: space-evenly;
-
         .prefLinkBtn {
             border: 0px;
             margin-bottom: 40px;
@@ -24,11 +22,9 @@
             background-repeat: no-repeat;
             box-shadow: 0px 0px 10px rgb(123, 123, 123);
         }
-
         .prefLinkBtn:nth-child(1) {
             background-image: url('imgs/logo1.svg');
         }
-
         .prefLinkBtn:nth-child(1)::after {
             right: 0px;
             top: 110px;
@@ -39,11 +35,9 @@
             position: absolute;
             content: "Sexual Offences";
         }
-
         .prefLinkBtn:nth-child(2) {
             background-image: url('imgs/logo2.svg');
         }
-
         .prefLinkBtn:nth-child(2)::after {
             right: 0px;
             top: 110px;
@@ -54,11 +48,9 @@
             position: absolute;
             content: "Bail";
         }
-
         .prefLinkBtn:nth-child(3) {
             background-image: url('imgs/logo3.svg');
         }
-
         .prefLinkBtn:nth-child(3)::after {
             right: 0px;
             top: 110px;
@@ -69,11 +61,9 @@
             position: absolute;
             content: "Internet Crime";
         }
-
         .prefLinkBtn:nth-child(4) {
             background-image: url('imgs/logo4.svg');
         }
-
         .prefLinkBtn:nth-child(4)::after {
             right: 0px;
             top: 110px;
@@ -84,11 +74,9 @@
             position: absolute;
             content: "Domestic Offences";
         }
-
         .prefLinkBtn:nth-child(5) {
             background-image: url('imgs/logo5.svg');
         }
-
         .prefLinkBtn:nth-child(5)::after {
             right: 0px;
             top: 110px;
@@ -99,11 +87,9 @@
             position: absolute;
             content: "Youth Charges";
         }
-
         .prefLinkBtn:nth-child(6) {
             background-image: url('imgs/logo6.svg');
         }
-
         .prefLinkBtn:nth-child(6)::after {
             right: 0px;
             top: 110px;
@@ -114,11 +100,9 @@
             position: absolute;
             content: "Firearm & Weapons";
         }
-
         .prefLinkBtn:nth-child(7) {
             background-image: url('imgs/logo7.svg');
         }
-
         .prefLinkBtn:nth-child(7)::after {
             right: 0px;
             top: 110px;
@@ -129,11 +113,9 @@
             position: absolute;
             content: "Assaults & Threats";
         }
-
         .prefLinkBtn:nth-child(8) {
             background-image: url('imgs/logo8.svg');
         }
-
         .prefLinkBtn:nth-child(8)::after {
             right: 0px;
             top: 110px;
@@ -145,7 +127,6 @@
             content: "Property, Fraud & Theft";
         }
     }
-
     & .prefLinks::-webkit-scrollbar {
         display: none;
     }

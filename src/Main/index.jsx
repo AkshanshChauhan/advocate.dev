@@ -21,6 +21,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Customer_Support from "../Pages/Customer_Support";
 import MyLoyality from "../Pages/MyProfile/my_loyality";
 import Chat from "../Chat";
+import Wishlist from "../Pages/MyProfile/wishlist";
 
 function Home() {
     return (
@@ -69,6 +70,7 @@ function Main() {
                 <Route path="/myprofile/wallet" element={<Wallet height={400} top={60} />} />
                 <Route path="/myprofile/help-and-support" element={<Customer_Support height={400} top={60} />} />
                 <Route path="/myprofile/my-loyalty-status" element={<MyLoyality height={400} top={60} />} />
+                <Route path="/myprofile/wishlist" element={<Wishlist height={400} top={60} />} />
                 <Route path="/user/:id" element={<User/>}/>
                 <Route path="/chat" element={<Chat />}/>
             </Routes>

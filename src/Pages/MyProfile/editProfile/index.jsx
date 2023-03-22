@@ -46,6 +46,7 @@ export default function EditProfile(info) {
             .then(response => response.json())
             .then(result => {
                 setPlaceholders(result);
+                console.log(result)
             })
             .catch(error => console.log('error', error)); 
     }
@@ -60,7 +61,8 @@ export default function EditProfile(info) {
         formdata.append("last_name", name.split(" ")[1] ? name.split(" ")[1] : "");
         formdata.append("email", email);
         formdata.append("profile_pic", localStorage.getItem("base64img").split(",")[1]);
-        formdata.append("address", stat + " " + city);
+        formdata.append("city", city);
+        formdata.append("state", stat);
     
         var requestOptions = {
             method: 'POST',

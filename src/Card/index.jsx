@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./card.scss";
 
 function Card(info) {
@@ -21,7 +22,6 @@ function Card(info) {
         fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${info.isLike ? "dislike" : "like"}`, requestOptions)
             .then(response => response.json())
             .then(result => {
-                console.log(result, info.isLike);
                 if(info.isLike === true) {
                     setLikeBool(false);
                 } else {
@@ -65,9 +65,7 @@ function Card(info) {
                     <h3 className="supText">₹ {info.charge}/Min</h3>
                     <br></br>
                 </div>
-                <button className="viewButton" onClick={()=>{
-                    window.location.href = "/user/" + info.id;
-                }}>View</button>
+                <Link className="viewButton" to={"/user/" + info.id}>View</Link>
             </div>
         </div>
     )
