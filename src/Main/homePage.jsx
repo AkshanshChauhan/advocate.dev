@@ -125,6 +125,7 @@ function HomePage() {
     ];
 
     const [allUsers, setAllUsers] = useState([]);
+    const [allBlogs, setAllBlogs] = useState([]);
 
     const getAllUsersData = ()=>{
         const  requestOptions = {
@@ -141,10 +142,51 @@ function HomePage() {
             .catch(error => console.log('error', error));
     }
 
-    useEffect(()=>{
-        getAllUsersData();
-    },[]);
+    const getAllUsersDataAuth = ()=> {
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
 
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        fetch("https://api.theonlineattorney.in/api/v1/all_profile/auth/", requestOptions)
+            .then(response => response.json())
+            .then((result) => {
+                setAllUsers(result);
+                console.log(result)
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    const getAllBlogData = ()=>{
+        const requestOptions2 = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+          
+        fetch("https://api.theonlineattorney.in/api/v1/blog", requestOptions2)
+            .then(response => response.json())
+            .then(result => setAllBlogs(result))
+            .catch(error => console.log('error', error));
+    }
+
+    useEffect(()=>{
+        localStorage.getItem("token") != undefined ? getAllUsersDataAuth() : getAllUsersData();
+        getAllBlogData();
+    }, []);
+
+
+    // <BigCard 
+    //     bgurl={e.background} 
+    //     heading="What’s Coming for Legal Departments in 2023? (Adv.)" 
+    //     name="Akshansh" 
+    //     date="February 8, 2023" 
+    //     content="Corporate legal departments have seen some significant  changes over the past couple of years. The ongoing explosion of data volumes and rapid adoption of new communications technologies have made e-discovery operations more complex and expensive to manage, convincing many departments to move operations in-house. The requirements of privacy regulations, and the data inventory, discovery, and production capabilities necessary to meet......"
+    //     key={k}
+    // />
 
     return (
         <div className="homePage">
@@ -171,13 +213,13 @@ function HomePage() {
             </div>
             <Affidavit />
             <div className="cards">
-                {json.map((e, k)=>
+                {allBlogs.map((e, k)=>
                     <BigCard 
-                        bgurl={e.background} 
-                        heading="What’s Coming for Legal Departments in 2023? (Adv.)" 
-                        name="Akshansh" 
-                        date="February 8, 2023" 
-                        content="Corporate legal departments have seen some significant  changes over the past couple of years. The ongoing explosion of data volumes and rapid adoption of new communications technologies have made e-discovery operations more complex and expensive to manage, convincing many departments to move operations in-house. The requirements of privacy regulations, and the data inventory, discovery, and production capabilities necessary to meet......"
+                        bgurl={"https://api.theonlineattorney.in" + e.img} 
+                        heading={e.title} 
+                        name={e.writen_by} 
+                        date={e.time} 
+                        content={e.content}
                         key={k}
                     />
                 )}
@@ -190,5 +232,4 @@ function HomePage() {
         </div>
     )
 }
-
 export default HomePage;

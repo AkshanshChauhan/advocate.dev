@@ -13,15 +13,21 @@ import mpic7 from "./imgs/mpic7.svg";
 function NavBar() {
     const [pos, setPos] = useState("");
     const [myProfVis, setMyProfVis] = useState(true);
+    const logout = async ()=>{
+        await localStorage.removeItem("token");
+        window.location.reload();
+    }
     window.onscroll = ()=> setPos(window.scrollY);
     return(
         <div className="navbar" style={{top: pos>200 ? "-120px" : "0px"}}>
-            <div className="upperNav">
+            {/* <div className="upperNav">
                 <img style={{width: "12rem", marginTop: "2rem"}} src={mainLogo} alt=""></img>
                 <div className="loginSection"><Link className="loginLink">LOGIN</Link></div>
-            </div>
+            </div> */}
             <div className="lowerNav">
-                <Link className="navLinks" to={"/"}>HOME</Link>
+                <Link className="navLinks logo" to={"/"}>
+                    <img style={{width: "100px"}} src={mainLogo} alt=""></img>
+                </Link>
                 <Link className="navLinks" to={"/lawyers"}>LAWYERS</Link>
                 <Link className="navLinks" to={"/affidavit"}>AFFIDAVIT</Link>
                 <Link className="navLinks" to={"/contact"}>CONTACT</Link>
@@ -35,6 +41,7 @@ function NavBar() {
                         <Link className="myProfileLink" to={"/myprofile/my-loyalty-status"}><img src={mpic6} alt="myProfileIcon6" width={25} /> My Loyalty Status</Link>
                         <Link className="myProfileLink" to={"/myprofile/recent-services"}><img src={mpic7} alt="myProfileIcon7" width={25} /> Recent Services</Link>
                         <button className="myProfileBtn">Join as Advocate</button>
+                        <button className="myProfileBtn holo" onClick={()=>logout()}>Log Out</button>
                     </div>
                 </div>
             </div>

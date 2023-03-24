@@ -31,7 +31,7 @@ export default function Payment(info) {
     <>
         <Background backgroundImage={info.backgroundImage} height={info.height} top={info.top} />
         <div className="payment">
-            <div className="payment-left">
+            {/* <div className="payment-left">
                 <h1 className="payment-heading">Payment Method</h1>
                 <p className="payment-sub-heading">CREDIT AND DEBIT CARDS</p>
                 <div className="pm-box">
@@ -52,7 +52,7 @@ export default function Payment(info) {
                     <div className="icon" style={{backgroundImage: "url(" + img3 + ")"}}></div>
                     <div className="title">Net Banking</div>
                 </div>
-            </div>
+            </div> */}
             <div className="payment-right">
                 <h1>Transaction History</h1>
                 {trHistory.map((data)=><Card name={data.name} /> )}
