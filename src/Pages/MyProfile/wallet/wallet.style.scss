@@ -74,12 +74,35 @@
             }
         }
     }
+    .button:disabled {
+        background-color: #707070;
+        color: white;
+    }
     .button {
         margin: 0px 40px;
         width: calc(100% - 80px);
         border: 0px;
         padding: 15px;
         background-color: #FFCD6C;
+        .loading-st {
+            width: 10px;
+            height: 10px;
+            margin: 0px auto;
+            border: 2px solid #FFCD6C;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: load 1s ease-in-out infinite;
+            transform: rotateZ(0deg);
+        }
     }
     margin-bottom: 300px;
+}
+
+@keyframes load {
+    0% {
+        transform: rotateZ(10deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }

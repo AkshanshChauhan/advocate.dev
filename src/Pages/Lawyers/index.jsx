@@ -34,13 +34,16 @@ function Lawyers(info) {
     const [clickIndex, setClickIndex] = useState(0);
     const [allUsers, setAllUsers] = useState([]);
 
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
     const getAllUsersData = ()=>{
         const  requestOptions = {
+            headers: myHeaders,
             method: 'GET',
             redirect: 'follow'
         };
     
-        fetch("https://api.theonlineattorney.in/api/v1/all_profile/", requestOptions)
+        fetch("https://api.theonlineattorney.in/api/v1/all_profile/auth", requestOptions)
             .then(response => response.json())
             .then((result) => {
                     setAllUsers(result);

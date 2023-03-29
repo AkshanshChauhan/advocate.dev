@@ -26,9 +26,10 @@ function Pref(info) {
         getAllOps();
     }, [])
 
+    const [select, setSelect] = useState(0);
     function ButtonOps(data) {
         return (
-            <button className="prefLinkBtn" onClick={()=>info.clickCheck(data.index)}></button>
+            <button className="prefLinkBtn" onClick={()=>{info.clickCheck(data.index); setSelect(data.index)}} style={select===data.index ? {outline: "2px solid #CB7C00"} : {}}></button>
         )
     }
 

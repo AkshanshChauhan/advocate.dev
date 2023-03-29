@@ -1,5 +1,6 @@
 import "./main.scss";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function User() {
     const [data, setId] = useState([]);
@@ -144,7 +145,7 @@ what you have been charged with.</div>
                         <div className="user-charge"><b>₹100/min</b></div>
                     </div>
                     <div className="user-button-section">
-                        <button className="user-contact">Consult Now</button>
+                        {data.consult==="Accept" ? <button className="user-contact">Consult Now</button> : <Link to={"/chat"} className="user-contact">Message</Link>}
                         <div className="user-rating">
                             <div className="rating">
                                 <input className="star" type="checkbox" />
@@ -237,6 +238,21 @@ intensity and professionalism regardless of the charges they face.</div>
                         )
                     })}
                 </div>
+            </div>
+            <div className="give-review-section">
+                <div className="rating">
+                    <div className="user-rating">
+                        <div className="rating">
+                            <input className="star" type="checkbox" />
+                            <input className="star" type="checkbox" />
+                            <input className="star" type="checkbox" />
+                            <input className="star" type="checkbox" />
+                            <input className="star" type="checkbox" />
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="hint: Nice way of Taking.."></textarea>
+                <button className="send">Rate</button>
             </div>
         </div>
     )

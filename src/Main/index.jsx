@@ -22,6 +22,7 @@ import Customer_Support from "../Pages/Customer_Support";
 import MyLoyality from "../Pages/MyProfile/my_loyality";
 import Chat from "../Chat";
 import Wishlist from "../Pages/MyProfile/wishlist";
+import BlogPage from "../BlogPage";
 
 function Home() {
     return (
@@ -73,6 +74,7 @@ function Main() {
                 <Route path="/myprofile/wishlist" element={<Wishlist height={400} top={60} />} />
                 <Route path="/user/:id" element={<User/>}/>
                 <Route path="/chat" element={<Chat />}/>
+                <Route path="/blog/:id" element={<BlogPage />} />
             </Routes>
         </BrowserRouter>
     )

@@ -10,6 +10,7 @@ const rechargePackJSON = [50, 100, 200, 3000, 500, 1000, 2000, 40000, 5000, 1000
 export default function Wallet(info) {
     const [price, setPrice] = useState(50);
     const [selPrice, setSelPrice] = useState(0);
+    const [isLoading, setIsLoading] = useState(false)
     function Button(pr) {
         return (
             <button className={selPrice===pr.index ? "rechargePrice sel" : "rechargePrice"} onClick={(e)=>{
@@ -17,6 +18,27 @@ export default function Wallet(info) {
                 setPrice(pr.price);
             }}>₹ {pr.price}</button>
         )
+    }
+
+    function processToRPay() {
+        setIsLoading(true);
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + localStorage.getItem('token'));
+
+        var formdata = new FormData();
+        formdata.append("amount", "20");
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: formdata,
+            redirect: 'follow'
+        };
+
+        fetch("https://api.theonlineattorney.in/api/v1/payment/create_payment_link", requestOptions)
+            .then(response => response.json())
+            .then(result => { setIsLoading(false); window.open(result.link.link) })
+            .catch(error => console.log('error', error));
     }
     return (
         <>
@@ -63,7 +85,7 @@ export default function Wallet(info) {
                     </tr>
                 </table>
             </div>
-            <button className="button">PROCESS TO PAY</button>
+            <button className="button" disabled={isLoading===true ? true : false} onClick={()=>processToRPay()}>{isLoading ? <div className="loading-st"></div> : "PROCESS TO PAY"}</button>
         </div>
         </>
     )

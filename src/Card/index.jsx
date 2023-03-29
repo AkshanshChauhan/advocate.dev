@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import "./card.scss";
 
 function Card(info) {
+    const [isLike, setIsLike] = useState(false);
     const [likeBool, setLikeBool] = useState(false);
-
+    console.log(info.isLike)
     useEffect(()=>{
+        info.isLike ? setIsLike(true) : setIsLike(false);
         info.isLike ? setLikeBool(true) : setLikeBool(false);
-    });
+    }, [setIsLike]);
 
     function like(id) {
         var myHeaders = new Headers();
@@ -19,13 +21,15 @@ function Card(info) {
             redirect: 'follow'
         };
     
-        fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${info.isLike==="like" ? "dislike" : "like"}`, requestOptions)
+        fetch(`https://api.theonlineattorney.in/api/v1/action/${id}?action=${ isLike ? "dislike" : "like"}`, requestOptions)
             .then(response => response.json())
             .then(result => {
-                if(info.isLike === true) {
+                if(result.message === "like done") {
                     setLikeBool(false);
+                    setIsLike(true);
                 } else {
                     setLikeBool(true);
+                    setIsLike(false);
                 }
             })
             .catch(error => console.log('error', error));
@@ -41,7 +45,7 @@ function Card(info) {
                             <h3 className="supText">{info.name}</h3>
                             <p className="subText">{info.location}</p>
                         </div>
-                        <button className={likeBool ? "heart-like" : "heart"} onClick={()=>like(info.id)}></button>
+                        <button className={isLike ? "heart-like" : "heart"} onClick={()=>like(info.id)}></button>
                     </div>
                     <div className="innerUpperCardMidBottom">
                         <div>

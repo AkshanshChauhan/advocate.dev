@@ -1,6 +1,6 @@
 import React from "react";
 import "./bigCard.scss";
-
+import { Link } from "react-router-dom";
 function BigCard(info) {
     return (
         <div className="bigCard">
@@ -10,7 +10,7 @@ function BigCard(info) {
                 <p className="subHead">By <i>{info.name}</i> {info.date}</p>
                 <p className="contentText">{info.content}</p>
                 <div className="lowerBigCardRdMo">
-                    <h3>Read More</h3>
+                    <Link className="read-more" to={"/blog/" + info.index}><h3>Read More</h3></Link>
                 </div>
             </div>
         </div>

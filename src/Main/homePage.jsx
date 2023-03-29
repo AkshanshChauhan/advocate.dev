@@ -213,16 +213,19 @@ function HomePage() {
             </div>
             <Affidavit />
             <div className="cards">
-                {allBlogs.map((e, k)=>
-                    <BigCard 
-                        bgurl={"https://api.theonlineattorney.in" + e.img} 
-                        heading={e.title} 
-                        name={e.writen_by} 
-                        date={e.time} 
-                        content={e.content}
-                        key={k}
-                    />
-                )}
+                {
+                    allBlogs.map((e, k)=>
+                        <BigCard 
+                            bgurl={"https://api.theonlineattorney.in" + e.img} 
+                            heading={e.title} 
+                            name={e.writen_by} 
+                            date={e.time} 
+                            content={e.content}
+                            key={k}
+                            index={k}
+                        />
+                    )
+                }
             </div>
             <ButtonTem val="LOAD MORE BLOGS" />
             <RealClientReview btn={<ButtonTem val="VIEW ALL REVIEW" />} />

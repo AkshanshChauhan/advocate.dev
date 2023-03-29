@@ -198,6 +198,7 @@
                     flex-direction: column;
                     align-items: center;
                     .user-contact {
+                        text-decoration: none;
                         padding: 10px 80px;
                         background-color: white;
                         border: 0px;
@@ -332,6 +333,41 @@
                     font-style: italic;
                 }
             }
+        }
+    }
+    .give-review-section {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        gap: 10px;
+        .rating {
+            margin-top: 40px;
+            .rating {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .star {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        textarea {
+            height: 200px;
+            width: calc(90vw - 20px);
+            resize: none;
+            padding: 10px;
+            outline: 1px solid #C5C7D4;
+            border-radius: 5px;
+        }
+        .send {
+            padding: 10px 20px;
+            background-color: #E39D12;
+            margin-bottom: 40px;
+            color: white;
+            width: fit-content;
+            margin-left: auto;
+            border-radius: 5px;
         }
     }
 }
