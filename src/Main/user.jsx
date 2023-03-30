@@ -4,7 +4,26 @@ import { Link } from "react-router-dom";
 
 export default function User() {
     const [data, setId] = useState([]);
-    console.log(data)
+    const [myIdd, setMyId] = useState({});
+console.log(data)
+    function myId() {
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
+
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        fetch("https://api.theonlineattorney.in/api/v1/profile/", requestOptions)
+            .then(response => response.json())
+            .then(result => setMyId(result))
+            .catch(error => console.log('error', error));
+    }
+
+    console.log(myIdd, data)
+
     const getIdData = ()=> {
         var myHeaders = new Headers();
         myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
@@ -18,7 +37,7 @@ export default function User() {
         fetch(`https://api.theonlineattorney.in/api/v1/profile/${window.location.href.split("/")[window.location.href.split("/").length-1]}`, requestOptions)
             .then(response => response.json())
             .then(result => {
-                if(result !== null && result !== undefined) {
+                if(result !== null || result !== undefined) {
                     setId(result);
                 }
             })
@@ -105,8 +124,37 @@ export default function User() {
     }
     useEffect(()=>{
         getIdData();
+        myId();
         setCount(reviewJson.reviews.length);
     },[]);
+
+    function sendReview() {
+        var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
+
+    var formdata = new FormData();
+    formdata.append("user", data.id);
+    formdata.append("agent", myIdd.id);
+    formdata.append("rating", check);
+    formdata.append("review_title", title);
+    formdata.append("review", review);
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: formdata,
+        redirect: 'follow'
+    };
+
+    fetch("https://api.theonlineattorney.in/api/v1/review_create/", requestOptions)
+        .then(response => response.json())
+        .then(result => alert("REVIEW SUCCESSFULLY : \nRating: " + result.rating + "\nReview Title: " + result.review_title + "\nReview: " + result.review))
+        .catch(error => console.log('error', error));
+    }
+
+    const [check, setCheck] = useState(0);
+    const [title, setTitle] = useState("");
+    const [review, setReview] = useState("");
     return(
         <div className="userInformation">
             <div className="upper">
@@ -243,16 +291,17 @@ intensity and professionalism regardless of the charges they face.</div>
                 <div className="rating">
                     <div className="user-rating">
                         <div className="rating">
-                            <input className="star" type="checkbox" />
-                            <input className="star" type="checkbox" />
-                            <input className="star" type="checkbox" />
-                            <input className="star" type="checkbox" />
-                            <input className="star" type="checkbox" />
+                            <input className="star" type="checkbox" onClick={()=>setCheck(1)} checked={check===1 || check===2 || check===3 || check===4 || check===5 ? true : false} />
+                            <input className="star" type="checkbox" onClick={()=>setCheck(2)} checked={check===2 || check===3 || check===4 || check===5 ? true : false} />
+                            <input className="star" type="checkbox" onClick={()=>setCheck(3)} checked={check===3 || check===4 || check===5 ? true : false} />
+                            <input className="star" type="checkbox" onClick={()=>setCheck(4)} checked={check===4 || check===5 ? true : false} />
+                            <input className="star" type="checkbox" onClick={()=>setCheck(5)} checked={check===5 ? true : false} />
                         </div>
                     </div>
                 </div>
-                <textarea placeholder="hint: Nice way of Taking.."></textarea>
-                <button className="send">Rate</button>
+                <textarea cols="1" rows="1" placeholder="title" onChange={(e)=>setTitle(e.target.value)}></textarea>
+                <textarea placeholder="hint: Nice way of Taking.." onChange={(e)=>setReview(e.target.value)}></textarea>
+                <button className="send" onClick={()=>sendReview()}>Rate</button>
             </div>
         </div>
     )

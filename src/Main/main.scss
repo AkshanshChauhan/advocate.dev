@@ -352,7 +352,15 @@
                 }
             }
         }
-        textarea {
+        textarea:nth-child(2) {
+            height: 20px;
+            width: calc(90vw - 20px);
+            resize: none;
+            padding: 10px;
+            outline: 1px solid #C5C7D4;
+            border-radius: 5px;
+        }
+        textarea:nth-child(3) {
             height: 200px;
             width: calc(90vw - 20px);
             resize: none;
