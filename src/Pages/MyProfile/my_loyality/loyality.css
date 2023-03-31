@@ -1,0 +1,62 @@
+.my-loyalty .loyalty-point {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.my-loyalty .loyalty-point .left {
+  display: flex;
+  flex-direction: column;
+}
+.my-loyalty .loyalty-point .left .head {
+  font-weight: 600;
+}
+.my-loyalty .loyalty-point .left .sub {
+  color: #6B6B6B;
+}
+.my-loyalty .loyalty-point .right .point {
+  padding: 10px 40px;
+  color: #BB861F;
+  outline: 1px solid #BB861F;
+}
+.my-loyalty .recharge-card {
+  margin: 0px 40px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./img/img.svg");
+  padding: 40px;
+}
+.my-loyalty .recharge-card .left {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.my-loyalty .recharge-card .left .write {
+  font-size: x-large;
+}
+.my-loyalty .recharge-card .left .button {
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #F5CB79;
+}
+
+.box {
+  margin: 40px;
+  padding: 20px;
+  outline: 1px solid #BCBCBC;
+}
+
+.upper {
+  padding: 40px;
+}
+.upper .head {
+  font-weight: 600;
+}
+.upper .sub {
+  color: #6B6B6B;
+}/*# sourceMappingURL=loyality.css.map */

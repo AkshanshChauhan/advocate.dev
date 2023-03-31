@@ -1,0 +1,87 @@
+* {
+  outline: 0px solid red;
+}
+
+.card {
+  gap: 10px;
+  width: 400px;
+  display: grid;
+  padding: 10px;
+  padding-bottom: 0px;
+  height: fit-contents;
+  border-radius: 10px;
+  outline: 1px solid #E3E3E3;
+  background-color: #F9F9F9;
+}
+.card .upperCard {
+  gap: 10px;
+  display: flex;
+}
+.card .upperCard .innerUpperCardLeft {
+  padding: 60px;
+  border-radius: 10px;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+}
+.card .upperCard .innerUpperCardMid {
+  gap: 10px;
+  width: 100%;
+  display: grid;
+}
+.card .upperCard .innerUpperCardMid .innerUpperCardMidTop {
+  display: flex;
+}
+.card .upperCard .innerUpperCardMid .innerUpperCardMidTop .heart-like {
+  border: 0px;
+  padding: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-size: cover;
+  background-color: #F9F9F9;
+  background-image: url("../Images/heart-fill.png");
+}
+.card .upperCard .innerUpperCardMid .innerUpperCardMidTop .heart {
+  border: 0px;
+  padding: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-size: cover;
+  background-color: #F9F9F9;
+  background-image: url("../Images/heart.svg");
+}
+.card .upperCard .innerUpperCardMid .innerUpperCardMidBottom {
+  gap: 10px;
+  width: 80%;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  background-color: #F6E9CF;
+  justify-content: space-evenly;
+}
+.card .lowerCard {
+  display: flex;
+}
+.card .lowerCard .innerLowerCardLeft {
+  width: 80%;
+}
+.card .lowerCard .viewButton {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 20%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: black;
+  transform: translateX(10px) translateY(20px);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.small {
+  font-size: 10px;
+}/*# sourceMappingURL=card.css.map */

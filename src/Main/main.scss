@@ -301,13 +301,34 @@
                 flex-direction: column;
                 gap: 10px;
                 padding-bottom: 40px;
-                .name {
-                    font-size: larger;
-                    font-weight: 500;
-                }
-                .date {
-                    font-size: smaller;
-                    color: #90929C;
+                width: 90vw;
+                .upper {
+                    display: flex;
+                    justify-content: space-between;
+                    .left {
+                        .name {
+                            font-size: larger;
+                            font-weight: 500;
+                        }
+                        .date {
+                            font-size: smaller;
+                            color: #90929C;
+                        }
+                    }
+                    .right {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100px;
+                        gap: 5px;
+                        align-items: center;
+                        .rating-star {
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: center;
+                        }
+                    }
                 }
                 .inner-heading-section {
                     display: flex;

@@ -1,0 +1,73 @@
+.blog-page {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  align-items: center;
+}
+.blog-page .inner {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-page .inner .main {
+  width: 50vw;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.blog-page .inner .main .left {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+.blog-page .inner .main .left .inner-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.blog-page .inner .main .left .inner-main .blog-heading {
+  font-size: xx-large;
+  font-weight: 600;
+  color: #FFCD6C;
+}
+.blog-page .inner .main .left .inner-main .blog-date-box {
+  background-color: #EEEEEE;
+  padding: 10px;
+  font-size: x-small;
+}
+.blog-page .inner .main .left .inner-main .blog-image {
+  height: 200px;
+  background-size: cover;
+  background-position: top;
+}
+.blog-page .inner .main .left .inner-main .blog-text {
+  color: #838596;
+}
+.blog-page .inner .main .side-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-page .inner .main .side-links .link-icon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.blog-page .inner .sub-section {
+  display: flex;
+  padding: 10px 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFCD6C;
+}
+.blog-page .inner .sub-section .sub-button {
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+}/*# sourceMappingURL=blog.css.map */

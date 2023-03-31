@@ -1,10 +1,13 @@
 import "./main.scss";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import starFill from "../Images/star.svg";
+import star from "../Images/starFill.svg";
 
 export default function User() {
     const [data, setId] = useState([]);
     const [myIdd, setMyId] = useState({});
+    const [statusRev, setStat] = useState(false);
 console.log(data)
     function myId() {
         var myHeaders = new Headers();
@@ -36,96 +39,93 @@ console.log(data)
 
         fetch(`https://api.theonlineattorney.in/api/v1/profile/${window.location.href.split("/")[window.location.href.split("/").length-1]}`, requestOptions)
             .then(response => response.json())
-            .then(result => {
+            .then((result) => {
                 if(result !== null || result !== undefined) {
                     setId(result);
+                    setReviews(result.reviews);
+                    setStat(true)
                 }
             })
             .catch(error => console.log('error', error));
     }
-    function setCount(val) {
-        setReviewCount(val)
-    }
-    const [count, setReviewCount] = useState();
     const randomNames = ["Rohan", "Rahul", "Yaman", "Abhishek", "Anmol", "Lokesh", "Vinodh", "Daman", "Bobby"];
-    const reviewJson = {
-        reviews: [
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            },
-            {
-                name: randomNames[Math.round(Math.random()*9)],
-                date: "7 October 2021",
-                rating: "4.5",
-                title: "Charges withdrawn Peace Bond Rating",
-                description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
-            }
-        ]    
-    }
+    // const reviewJson = {
+    //     reviews: [
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         },
+    //         {
+    //             name: randomNames[Math.round(Math.random()*9)],
+    //             date: "7 October 2021",
+    //             rating: "4.5",
+    //             title: "Charges withdrawn Peace Bond Rating",
+    //             description: "Toni & her legal team provided expertise & confidence to manage a very difficult situation. Tonii was very good in explaining the step by step process, strategize to increase win odds and masterfully managing expectation along the way."
+    //         }
+    //     ]    
+    // }
     useEffect(()=>{
         getIdData();
         myId();
-        setCount(reviewJson.reviews.length);
     },[]);
 
     function sendReview() {
@@ -148,13 +148,17 @@ console.log(data)
 
     fetch("https://api.theonlineattorney.in/api/v1/review_create/", requestOptions)
         .then(response => response.json())
-        .then(result => alert("REVIEW SUCCESSFULLY : \nRating: " + result.rating + "\nReview Title: " + result.review_title + "\nReview: " + result.review))
+        .then(result => {
+            // alert("REVIEW SUCCESSFULLY : \nRating: " + result.rating + "\nReview Title: " + result.review_title + "\nReview: " + result.review);
+            getIdData();
+        })
         .catch(error => console.log('error', error));
     }
 
     const [check, setCheck] = useState(0);
     const [title, setTitle] = useState("");
     const [review, setReview] = useState("");
+    const [reviews, setReviews] = useState({});
     return(
         <div className="userInformation">
             <div className="upper">
@@ -268,23 +272,32 @@ intensity and professionalism regardless of the charges they face.</div>
             </div>
             </div>
             <div className="review-section">
-                <div className="review-heading">REVIEWS ({count})</div>
+                <div className="review-heading">REVIEWS ({})</div>
                 <div className="review-map">
-                    {reviewJson.reviews.map((data)=>{
+                    {statusRev ? reviews.map((da)=>{
                         return (                            
                             <div className="review">
-                                <div>
-                                    <div className="name">{data.name}</div>
-                                    <div className="date">{data.date}</div>
+                                <div className="upper">
+                                    <div className="left">
+                                        <div className="name">{da.id}</div>
+                                        <div className="date">{}</div>
+                                    </div>
+                                    <div className="right">
+                                        <div className="rating-star" style={da.rating===1 || da.rating===2 || da.rating===3 || da.rating===4 || da.rating===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}></div>
+                                        <div className="rating-star" style={da.rating===2 || da.rating===3 || da.rating===4 || da.rating===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}></div>
+                                        <div className="rating-star" style={da.rating===3 || da.rating===4 || da.rating===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}></div>
+                                        <div className="rating-star" style={da.rating===4 || da.rating===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}></div>
+                                        <div className="rating-star" style={da.rating===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}></div>
+                                    </div>
                                 </div>
                                 <div className="inner-heading-section">
                                     <div className="big-comma"></div>
-                                    <div className="inner-heading">{data.title}</div>
+                                    <div className="inner-heading">{da.review_title}</div>
                                 </div>
-                                <div className="review-description">{data.description}</div>
+                                <div className="review-description">{da.review}</div>
                             </div>
                         )
-                    })}
+                    }): null}
                 </div>
             </div>
             <div className="give-review-section">

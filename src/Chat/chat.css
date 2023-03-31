@@ -1,0 +1,89 @@
+* {
+  border: 0px solid red;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  height: 80vh;
+  color: #000;
+  margin-top: 100px;
+}
+.chat .nav {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chat .nav .left-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.chat .nav .left-section .back-icon {
+  height: 30px;
+  width: 30px;
+  background-image: url("./icon/backarr.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.chat .nav .left-section .person-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("./icon/person.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.chat .nav .left-section .person-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat .nav .right-section .upper-ar {
+  font-size: xx-small;
+}
+.chat .nav .right-section .upper-ar .fade {
+  color: #848484;
+}
+.chat .nav .right-section .upper-ar .not-fade {
+  color: black;
+}
+.chat .nav .right-section .lower-ar {
+  text-align: right;
+}
+.chat .chatting-section {
+  height: 60%;
+}
+.chat .messaging-section {
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.chat .messaging-section .clip-icon {
+  background-image: url("./icon/clip.svg");
+  width: 20px;
+  height: 40px;
+  margin-left: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.chat .messaging-section input {
+  border: 0px;
+  outline: 0px;
+  padding: 10px;
+  width: 100%;
+}
+.chat .messaging-section .send-icon {
+  background-image: url("./icon/send.svg");
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=chat.css.map */

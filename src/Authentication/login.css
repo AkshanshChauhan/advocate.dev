@@ -1,0 +1,145 @@
+* {
+  margin: 0px;
+}
+
+.loginBox {
+  top: 90vh;
+  padding: 2rem;
+  display: grid;
+  margin: 0px 10%;
+  position: absolute;
+  border-radius: 10px;
+  grid-auto-flow: column;
+  width: calc(80% - 4rem);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  justify-content: space-evenly;
+  outline: 1px solid rgb(203, 203, 203);
+  background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.534));
+}
+.loginBox .loginInnerSection {
+  gap: 10px;
+  width: 20vw;
+  display: grid;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.loginBox .loginInnerSection .loginInnerBottom {
+  display: flex;
+  align-items: center;
+}
+.loginBox .loginInnerSection .loginInnerBottom input[type=tel] {
+  padding: 15px;
+  padding-left: 60px;
+  border-radius: 10px;
+  border: 1px solid #707070;
+}
+.loginBox .loginInnerSection .loginInnerBottom input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #707070;
+}
+.loginBox .loginInnerSection .loginInnerBottom .inputPrefix {
+  font-size: smaller;
+  position: absolute;
+  transform: translateX(10px) translateY(-1.5px);
+}
+.loginBox .loginInnerSection .loginInnerBottom .hoLine {
+  border-right: 1px solid #707070;
+}
+
+.otpSection {
+  top: 0px;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1215686275);
+}
+.otpSection .otp {
+  height: 50vh;
+  display: flex;
+  min-width: 500px;
+  min-height: 350px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: white;
+}
+.otpSection .otp .otpLeft {
+  width: 200px;
+  padding: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./imgs/otpbg.svg");
+}
+.otpSection .otp .otpLeft .otpLeftInnerLogo {
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../Images/mainLogo.svg");
+}
+.otpSection .otp .otpLeft .otpLeftInnerBottomTextArea {
+  height: 70%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.otpSection .otp .otpLeft .otpLeftInnerBottomTextArea .otpLeftInnerBottomText {
+  color: white;
+  font-weight: 600;
+  font-size: larger;
+}
+.otpSection .otp .otpRight {
+  width: 300px;
+  padding: 20px;
+  display: grid;
+  align-content: flex-start;
+}
+.otpSection .otp .otpRight .otpRightCrossSection {
+  display: flex;
+  justify-content: right;
+}
+.otpSection .otp .otpRight .otpRightCrossSection .otpRightCross {
+  cursor: pointer;
+  transform: scaleX(160%) scaleY(120%);
+}
+.otpSection .otp .otpRight .otpRightHeading {
+  font-weight: 600;
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+.otpSection .otp .otpRight .otpRightSubHeading {
+  font-size: small;
+  color: #999999;
+  margin-bottom: 20px;
+}
+.otpSection .otp .otpRight .otpRightSubHeading u {
+  color: #E27D00;
+}
+.otpSection .otp .otpRight .otpInputSection {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+.otpSection .otp .otpRight .otpInputSection .otpInput {
+  width: 10px;
+  border: 0px;
+  outline: 0px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.otpSection .otp .otpRight .otpInputSection .otpInput:focus {
+  border-bottom: 2px solid black;
+}
+.otpSection .otp .otpRight .otpButton {
+  padding: 10px;
+  border: 0px;
+  outline: 0px;
+  border-radius: 50px;
+  background-color: #FFCD6C;
+}/*# sourceMappingURL=login.css.map */

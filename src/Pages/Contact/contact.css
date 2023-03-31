@@ -1,0 +1,73 @@
+.contactHead {
+  font-weight: 400;
+  font-size: 2.5em;
+  text-align: center;
+  word-spacing: 10px;
+}
+
+.contactContent {
+  gap: 100px;
+  display: flex;
+  padding: 100px;
+}
+.contactContent .contactLeft {
+  width: 50%;
+  display: grid;
+  align-items: flex-start;
+}
+.contactContent .contactLeft .contactLeftHead {
+  color: #8B9B9F;
+  font-size: large;
+}
+.contactContent .contactLeft .contactLeftFatHead {
+  color: #8B9B9F;
+  font-weight: 700;
+  font-size: x-large;
+}
+.contactContent .contactLeft .contactLeftNumber {
+  font-weight: 700;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+}
+.contactContent .contactLeft .contactLeftLowerHead {
+  font-weight: 700;
+}
+.contactContent .contactLeft .contactLeftLowerSub {
+  color: #8C8C8C;
+}
+.contactContent .contactRight {
+  gap: 40px;
+  width: 50%;
+  display: grid;
+}
+.contactContent .contactRight .contactLable {
+  font-weight: 700;
+  transform: translateX(10px);
+}
+.contactContent .contactRight section {
+  display: grid;
+}
+.contactContent .contactRight .contactInput {
+  border: 0px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #F5F5F4;
+  outline: 2px solid #D5D5D5;
+}
+.contactContent .contactRight .contactInputCounter {
+  margin-top: 5px;
+  font-size: small;
+  transform: translateX(10px);
+}
+.contactContent .contactRight .contactSendButton {
+  border: 0px;
+  color: white;
+  font-weight: 600;
+  padding: 15px 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #4B565F;
+}/*# sourceMappingURL=contact.css.map */

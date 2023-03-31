@@ -1,0 +1,413 @@
+.homeBackground {
+  height: 100vh;
+  margin-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+  animation: pageLoad 0.1s ease-in-out reverse;
+}
+
+.homePage {
+  width: 100%;
+  height: 100px;
+  display: grid;
+  position: relative;
+  justify-items: center;
+}
+.homePage .ourProcessInner {
+  width: 80%;
+  display: flex;
+  margin-top: 150px;
+  outline: 2px solid #CBCBCB;
+  justify-content: space-evenly;
+}
+.homePage .ourProcessInner .ourProcessInnerSection {
+  gap: 5px;
+  width: 200px;
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  transform: translateY(-35%);
+}
+.homePage .ourProcessInner .processImage {
+  width: 100px;
+}
+.homePage .affidavit {
+  display: grid;
+  padding: 50px;
+  background-size: cover;
+  width: calc(100% - 100px);
+  background-repeat: no-repeat;
+  background-image: url("../Images/affidavitBg.svg");
+}
+.homePage .affidavit .affidavitProcessBox {
+  gap: 10px;
+  display: flex;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.homePage .affidavit .affidavitProcessBox .affidavitProcess {
+  gap: 10px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.homePage .affidavit .affidavitProcessBox .affidavitProcess h3 {
+  font-weight: 400;
+}
+.homePage .affidavit .affidavitProcessBox .affidavitProcess .affidavitProcessIcon {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+.homePage .affidavit .affidavitProcessBox .affidavitProcessArrow {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.homePage .affidavit .linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.homePage .affidavit .linkButton .affidavitButton {
+  border: 0px;
+  outline: 0px;
+  font-weight: 500;
+  padding: 15px 40px;
+  border-radius: 10px;
+  justify-self: center;
+  background-color: #FFCD6C;
+}
+.homePage .cards {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0px;
+  align-items: center;
+  justify-content: center;
+}
+.homePage .realClientReview {
+  width: 100%;
+  margin: 40px 0px;
+  display: grid;
+  padding: 20px 0px;
+  background-color: #E5E9EA;
+}
+.homePage .realClientReview .realClientReviewTop {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homePage .realClientReview .realClientReviewSections {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+  align-content: center;
+  justify-content: center;
+}
+.homePage .realClientReview .realClientReviewSections .realClientReviewSection {
+  width: 28%;
+  padding: 40px;
+  background-color: white;
+}
+.homePage .ourVisionSection {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  padding: 200px 0px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.homePage .troubleSection {
+  gap: 50px;
+  display: grid;
+  margin: 100px 0px;
+}
+.homePage .troubleSection .troubleSectionSteps {
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.homePage .troubleSection .troubleSectionSteps .troubleSectionStep {
+  gap: 10px;
+  width: 250px;
+  padding: 40px;
+  display: grid;
+  align-content: flex-start;
+}
+.homePage .troubleSection .troubleSectionSteps .troubleSectionStep p {
+  color: #838596;
+}
+
+.userInformation {
+  display: flex;
+  height: -moz-max-content;
+  height: max-content;
+  gap: 10px;
+  padding: 40px;
+  padding-top: 140px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userInformation .upper {
+  display: flex;
+}
+.userInformation .upper .left {
+  width: 50%;
+}
+.userInformation .upper .left .user-name {
+  text-align: left;
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+}
+.userInformation .upper .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.userInformation .upper .right .user-image-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.userInformation .upper .right .user-image-section .user-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 400px;
+}
+.userInformation .upper .right .user-charge-and-btn {
+  width: 400px;
+  justify-content: space-between;
+  display: flex;
+}
+.userInformation .upper .right .user-charge-and-btn .user-button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.userInformation .upper .right .user-charge-and-btn .user-button-section .user-contact {
+  text-decoration: none;
+  padding: 10px 80px;
+  background-color: white;
+  border: 0px;
+  color: #E39D12;
+  outline: 1px solid #E39D12;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.userInformation .upper .right .user-charge-and-btn .user-button-section .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.userInformation .upper .right .user-charge-and-btn .user-button-section .rating .star {
+  width: 20px;
+  height: 20px;
+}
+.userInformation .add-serv {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+}
+.userInformation .add-serv .add-serv-card {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  display: grid;
+  border-radius: 5px;
+  border: 2px solid #CBCBCB;
+}
+.userInformation .add-serv .add-serv-card .add-serv-icon {
+  width: 50px;
+  height: 50px;
+  justify-self: center;
+  background-image: url("../Images/addServ.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.userInformation .add-serv .add-serv-card .price {
+  justify-self: right;
+}
+.userInformation .add-serv .add-serv-card .title {
+  font-weight: 600;
+  text-align: center;
+}
+.userInformation .add-serv .add-serv-card .description {
+  font-size: xx-small;
+  color: #838596;
+  text-align: center;
+}
+.userInformation .exp-section {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-top: 1px solid #C5C7D4;
+}
+.userInformation .exp-section .exp-heading {
+  border-top: 5px solid black;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
+  font-size: xx-large;
+}
+.userInformation .exp-section .exp-sub-heading {
+  font-size: x-large;
+  font-weight: 600;
+  color: #838596;
+}
+.userInformation .exp-section .exp-description {
+  font-size: small;
+  color: #838596;
+}
+.userInformation .exp-section .exp-sub {
+  color: #838596;
+}
+.userInformation .review-section {
+  display: grid;
+  gap: 40px;
+  border-top: 1px solid #838596;
+}
+.userInformation .review-section .review-heading {
+  font-size: xx-large;
+  font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-top: 5px solid black;
+}
+.userInformation .review-section .review-map {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.userInformation .review-section .review-map .review {
+  border-bottom: 1px solid #d2d2d2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 40px;
+  width: 90vw;
+}
+.userInformation .review-section .review-map .review .upper {
+  display: flex;
+  justify-content: space-between;
+}
+.userInformation .review-section .review-map .review .upper .left .name {
+  font-size: larger;
+  font-weight: 500;
+}
+.userInformation .review-section .review-map .review .upper .left .date {
+  font-size: smaller;
+  color: #90929C;
+}
+.userInformation .review-section .review-map .review .upper .right {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  gap: 5px;
+  align-items: center;
+}
+.userInformation .review-section .review-map .review .upper .right .rating-star {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.userInformation .review-section .review-map .review .inner-heading-section {
+  display: flex;
+  gap: 10px;
+}
+.userInformation .review-section .review-map .review .inner-heading-section .big-comma {
+  width: 80px;
+  height: 50px;
+  background-image: url("../Images/bigComma.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.userInformation .review-section .review-map .review .inner-heading-section .inner-heading {
+  display: flex;
+  align-items: flex-end;
+  color: #8B9B9F;
+  font-weight: 600;
+  font-style: italic;
+}
+.userInformation .review-section .review-map .review .review-description {
+  color: #AFA9A9;
+  font-size: small;
+  font-style: italic;
+}
+.userInformation .give-review-section {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  gap: 10px;
+}
+.userInformation .give-review-section .rating {
+  margin-top: 40px;
+}
+.userInformation .give-review-section .rating .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.userInformation .give-review-section .rating .rating .star {
+  width: 20px;
+  height: 20px;
+}
+.userInformation .give-review-section textarea:nth-child(2) {
+  height: 20px;
+  width: calc(90vw - 20px);
+  resize: none;
+  padding: 10px;
+  outline: 1px solid #C5C7D4;
+  border-radius: 5px;
+}
+.userInformation .give-review-section textarea:nth-child(3) {
+  height: 200px;
+  width: calc(90vw - 20px);
+  resize: none;
+  padding: 10px;
+  outline: 1px solid #C5C7D4;
+  border-radius: 5px;
+}
+.userInformation .give-review-section .send {
+  padding: 10px 20px;
+  background-color: #E39D12;
+  margin-bottom: 40px;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  border-radius: 5px;
+}
+
+@keyframes pageLoad {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

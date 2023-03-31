@@ -1,0 +1,141 @@
+.editProfileMain {
+  display: grid;
+  grid-auto-flow: column;
+}
+.editProfileMain .editProfile {
+  gap: 20px;
+  display: grid;
+  padding: 40px;
+  padding-top: 0px;
+}
+.editProfileMain .editProfile .editProfileHead {
+  font-weight: 700;
+  font-size: x-large;
+}
+.editProfileMain .editProfile .dpsection {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.editProfileMain .editProfile .dpsection .editProfileDP {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #B4B4B4;
+}
+.editProfileMain .editProfile .editProfileInputs {
+  gap: 20px;
+  display: grid;
+}
+.editProfileMain .editProfile .editProfileInputs .inp {
+  gap: 5px;
+  display: grid;
+}
+.editProfileMain .editProfile .editProfileInputs .inp .lable {
+  font-weight: 500;
+  transform: translate(15px);
+}
+.editProfileMain .editProfile .editProfileInputs .inp .input {
+  padding: 15px;
+  font-size: medium;
+  border-radius: 10px;
+  border: 1px solid #9F9F9F;
+}
+.editProfileMain .editProfile .editProfileInputs .inp .genderOpt {
+  gap: 10px;
+  padding: 10px;
+  display: grid;
+  border-radius: 10px;
+  grid-auto-flow: column;
+  border: 1px solid #9F9F9F;
+}
+.editProfileMain .editProfile .editProfileInputs .inp .genderOpt .genbtn {
+  border: 0px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+.editProfileMain .editProfile .editProfileInputs .inp .genderOpt .genbtnSel {
+  border: 0px;
+  padding: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #FFCD6C;
+}
+.editProfileMain .editProfile .editProfileInputs .lastBtns {
+  gap: 10px;
+  display: flex;
+  margin-top: 40px;
+  justify-content: right;
+}
+.editProfileMain .editProfile .editProfileInputs .lastBtns .bth {
+  width: 200px;
+  padding: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid #191A1F;
+  background-color: transparent;
+}
+.editProfileMain .editProfile .editProfileInputs .lastBtns .save {
+  border: 0px;
+  width: 200px;
+  padding: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #FFCD6C;
+}
+.editProfileMain .editProfile .editProfileInputs .stateAndZip {
+  gap: 10px;
+  display: grid;
+  grid-auto-flow: column;
+}
+.editProfileMain .rightSection {
+  gap: 20px;
+  padding: 20px;
+  display: grid;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  margin: 0px 40px 40px 0px;
+  align-content: flex-start;
+  box-shadow: 0px 0px 5px rgb(196, 196, 196);
+}
+.editProfileMain .rightSection .rightOpt {
+  padding: 15px;
+  color: gray;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: larger;
+}
+.editProfileMain .rightSection .rightOpt:hover {
+  background-color: rgb(239, 239, 239);
+}
+
+.loader {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.loader .ring {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 10px dotted rgb(255, 2, 2);
+  animation: ring 1s cubic-bezier(1, 1, 1, 1) 0s infinite;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}/*# sourceMappingURL=page.main.css.map */

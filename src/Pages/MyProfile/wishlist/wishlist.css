@@ -1,0 +1,67 @@
+.template-section {
+  display: flex;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.template-section .template {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.template-section .template .profile {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.template-section .template .profile .heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+.template-section .template .name {
+  font-weight: 700;
+}
+.template-section .template .location {
+  font-size: small;
+}
+.template-section .template .rwr {
+  display: flex;
+  text-align: center;
+  gap: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #F9F8F5;
+}
+.template-section .template .rwr .horiz .small-text {
+  font-size: small;
+}
+.template-section .template .rwr .horiz .value {
+  font-size: small;
+  font-weight: 700;
+}
+.template-section .template .charge {
+  display: flex;
+  font-size: small;
+  font-weight: 600;
+  gap: 10px;
+}
+.template-section .template .charge p {
+  font-weight: 400;
+  font-size: small;
+}
+.template-section .template .button {
+  padding: 10px 40px;
+  background-color: black;
+  color: white;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}/*# sourceMappingURL=wishlist.css.map */
