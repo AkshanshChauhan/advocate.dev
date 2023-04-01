@@ -6,6 +6,7 @@ import star from "../Images/starFill.svg";
 
 export default function User() {
     const [data, setId] = useState([]);
+    console.log(data)
     const [myIdd, setMyId] = useState({});
     const [statusRev, setStat] = useState(false);
 console.log(data)
@@ -200,11 +201,11 @@ what you have been charged with.</div>
                         {data.consult==="Accept" ? <button className="user-contact">Consult Now</button> : <Link to={"/chat"} className="user-contact">Message</Link>}
                         <div className="user-rating">
                             <div className="rating">
-                                <input className="star" type="checkbox" />
-                                <input className="star" type="checkbox" />
-                                <input className="star" type="checkbox" />
-                                <input className="star" type="checkbox" />
-                                <input className="star" type="checkbox" />
+                            <div className="rating-star" style={{backgroundImage: "url(" + starFill + ")"}}></div>
+                            <div className="rating-star" style={{backgroundImage: "url(" + starFill + ")"}}></div>
+                            <div className="rating-star" style={{backgroundImage: "url(" + starFill + ")"}}></div>
+                            <div className="rating-star" style={{backgroundImage: "url(" + starFill + ")"}}></div>
+                            <div className="rating-star" style={{backgroundImage: "url(" + starFill + ")"}}></div>
                                 <div className="small">See Reviews</div>
                             </div>
                         </div>
@@ -304,11 +305,11 @@ intensity and professionalism regardless of the charges they face.</div>
                 <div className="rating">
                     <div className="user-rating">
                         <div className="rating">
-                            <input className="star" type="checkbox" onClick={()=>setCheck(1)} checked={check===1 || check===2 || check===3 || check===4 || check===5 ? true : false} />
-                            <input className="star" type="checkbox" onClick={()=>setCheck(2)} checked={check===2 || check===3 || check===4 || check===5 ? true : false} />
-                            <input className="star" type="checkbox" onClick={()=>setCheck(3)} checked={check===3 || check===4 || check===5 ? true : false} />
-                            <input className="star" type="checkbox" onClick={()=>setCheck(4)} checked={check===4 || check===5 ? true : false} />
-                            <input className="star" type="checkbox" onClick={()=>setCheck(5)} checked={check===5 ? true : false} />
+                            <div className="star-main" style={check===1 || check===2 || check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(1)} checked={check===1 || check===2 || check===3 || check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===2 || check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(2)} checked={check===2 || check===3 || check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(3)} checked={check===3 || check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(4)} checked={check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(5)} checked={check===5 ? true : false} /></div>
                         </div>
                     </div>
                 </div>

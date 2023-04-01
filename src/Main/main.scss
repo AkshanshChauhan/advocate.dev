@@ -214,9 +214,12 @@
                         display: flex;
                         align-items: center;
                         gap: 10px;
-                        .star {
+                        .rating-star {
                             width: 20px;
                             height: 20px;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: center;
                         }
                     }
                 }
@@ -367,9 +370,19 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                .star {
-                    width: 20px;
-                    height: 20px;
+                .star-main {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .star {
+                        width: 20px;
+                        height: 20px;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
                 }
             }
         }
