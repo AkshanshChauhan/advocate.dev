@@ -29,7 +29,7 @@ function Pref(info) {
     const [select, setSelect] = useState(0);
     function ButtonOps(data) {
         return (
-            <button className="prefLinkBtn" onClick={()=>{info.clickCheck(data.index); setSelect(data.index)}} style={select===data.index ? {outline: "2px solid #CB7C00"} : {}}></button>
+            <button className="prefLinkBtn" onClick={()=>{info.clickCheck(data.index + 2); setSelect(data.index)}} style={select===data.index ? {outline: "2px solid #CB7C00"} : {}}></button>
         )
     }
 
@@ -38,7 +38,7 @@ function Pref(info) {
             <div className="prefLinks">
                 {allOps.map((e,i)=>{
                     return(
-                        <ButtonOps index={i+1}></ButtonOps>
+                        <ButtonOps index={i-1}></ButtonOps>
                     )
                 })}
             </div>

@@ -26,7 +26,7 @@ export default function Wallet(info) {
         myHeaders.append("Authorization", "Bearer " + localStorage.getItem('token'));
 
         var formdata = new FormData();
-        formdata.append("amount", "20");
+        formdata.append("amount", price + price*0.18 + price*0.10 + price*0.10);
 
         var requestOptions = {
             method: 'POST',

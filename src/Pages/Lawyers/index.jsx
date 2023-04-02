@@ -33,22 +33,19 @@ function ThisTop(data) {
 function Lawyers(info) {
     const [clickIndex, setClickIndex] = useState(0);
     const [allUsers, setAllUsers] = useState([]);
-
+    console.log(clickIndex, allUsers)
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
     const getAllUsersData = ()=>{
-        const  requestOptions = {
-            headers: myHeaders,
+        var requestOptions = {
             method: 'GET',
+            headers: myHeaders,
             redirect: 'follow'
         };
-    
-        fetch("https://api.theonlineattorney.in/api/v1/all_profile/auth", requestOptions)
+
+        fetch("https://api.theonlineattorney.in/api/v1/case_area/3", requestOptions)
             .then(response => response.json())
-            .then((result) => {
-                    setAllUsers(result);
-                }
-            )
+            .then(result => setAllUsers(result))
             .catch(error => console.log('error', error));
     }
 

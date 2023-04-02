@@ -6,10 +6,8 @@ import star from "../Images/starFill.svg";
 
 export default function User() {
     const [data, setId] = useState([]);
-    console.log(data)
     const [myIdd, setMyId] = useState({});
     const [statusRev, setStat] = useState(false);
-console.log(data)
     function myId() {
         var myHeaders = new Headers();
         myHeaders.append("Authorization", "Bearer " + localStorage.getItem("token"));
@@ -25,8 +23,6 @@ console.log(data)
             .then(result => setMyId(result))
             .catch(error => console.log('error', error));
     }
-
-    console.log(myIdd, data)
 
     const getIdData = ()=> {
         var myHeaders = new Headers();
@@ -220,30 +216,16 @@ what you have been charged with.</div>
 if you haven't done your recharge yet then recharge and
 continue our services. </div>
             <div className="add-serv">
-                <div className="add-serv-card">
-                    <div className="price">₹ 50</div>
-                    <div className="add-serv-icon"></div>
-                    <div className="title">Legal Notice</div>
-                    <div className="description">Notice is the legal concept describing a
-requirement that a party be aware of legal process
- affecting their rights, obligations or duties.</div>
-                </div>
-                <div className="add-serv-card">
-                    <div className="price">₹ 50</div>
-                    <div className="add-serv-icon"></div>
-                    <div className="title">Legal Notice</div>
-                    <div className="description">Notice is the legal concept describing a
-requirement that a party be aware of legal process
- affecting their rights, obligations or duties.</div>
-                </div>
-                <div className="add-serv-card">
-                    <div className="price">₹ 50</div>
-                    <div className="add-serv-icon"></div>
-                    <div className="title">Legal Notice</div>
-                    <div className="description">Notice is the legal concept describing a
-requirement that a party be aware of legal process
- affecting their rights, obligations or duties.</div>
-                </div>
+                {statusRev ? data.services.map((servData)=>{
+                    return (
+                        <div className="add-serv-card">
+                            <div className="price">{servData.price}</div>
+                            <div className="add-serv-icon" style={{backgroundImage: "url(https://api.theonlineattorney.in" + servData.service_icon + ")"}}></div>
+                            <div className="title">{servData.service_name}</div>
+                            <div className="description">{servData.service_description}</div>
+                        </div>
+                    ) 
+                }) : null}
             </div>
             <div className="exp-section">
                 <div className="exp-heading">EXPERIENCE</div>
