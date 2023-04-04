@@ -1,5 +1,6 @@
 .homeBackground {
     height: 100vh;
+    width: 100%;
     margin-bottom: 100px;
     background-size: cover;
     background-position: center;
@@ -15,6 +16,8 @@
     .ourProcessInner {
         width: 80%;
         display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
         margin-top: 150px;
         outline: 2px solid #CBCBCB;
         justify-content: space-evenly;
@@ -38,6 +41,7 @@
         background-repeat: no-repeat;
         background-image: url("../Images/affidavitBg.svg");
         .affidavitProcessBox {
+            flex-wrap: wrap;
             gap: 10px;
             display: flex;
             color: white;
@@ -420,5 +424,49 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .affidavit {
+        display: grid;
+        padding: 50px;
+        background-size: cover;
+        width: calc(100% - 100px);
+        background-repeat: no-repeat;
+        background-image: url("../Images/affidavitBg.svg");
+        .affidavitProcessBox {
+            flex-wrap: wrap;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: center;
+            .affidavitProcess {
+                gap: 10px;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                h3 {
+                    font-weight: 400;
+                }
+                .affidavitProcessIcon {
+                    width: 100px;
+                    height: 100px;
+                    background-size: cover;
+                }
+            }
+            .affidavitProcessArrow {
+                width: 50px;
+                height: 50px;
+                transform: rotateZ(90deg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
     }
 }
