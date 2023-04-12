@@ -9,6 +9,8 @@
   display: flex;
   padding-bottom: 50px;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 .footer .footerInner .footerInnerLeft {
   gap: 10px;
@@ -53,6 +55,7 @@
   justify-content: space-evenly;
 }
 .footer .footerInner .footerInnerRight .footerInnerRightLink {
+  flex-wrap: wrap;
   gap: 10px;
   width: 60vw;
   display: flex;

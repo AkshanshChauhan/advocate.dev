@@ -194,7 +194,7 @@ what you have been charged with.</div>
                         <div className="user-charge"><b>₹100/min</b></div>
                     </div>
                     <div className="user-button-section">
-                        {data.consult==="Accept" ? <button className="user-contact">Consult Now</button> : <Link to={"/chat"} className="user-contact">Message</Link>}
+                        {data.consult!=="Accept" ? <button className="user-contact">Consult Now</button> : <Link to={`/chat/${data.id}`} className="user-contact">Message</Link>}
                         <div className="user-rating">
                             <div className="rating">
                             <div className="rating-star" style={{backgroundImage: "url(" + starFill + ")"}}></div>
@@ -216,9 +216,9 @@ what you have been charged with.</div>
 if you haven't done your recharge yet then recharge and
 continue our services. </div>
             <div className="add-serv">
-                {statusRev ? data.services.map((servData)=>{
+                {statusRev ? data.services.map((servData, key)=>{
                     return (
-                        <div className="add-serv-card">
+                        <div className="add-serv-card" key={key}>
                             <div className="price">{servData.price}</div>
                             <div className="add-serv-icon" style={{backgroundImage: "url(https://api.theonlineattorney.in" + servData.service_icon + ")"}}></div>
                             <div className="title">{servData.service_name}</div>
@@ -257,9 +257,9 @@ intensity and professionalism regardless of the charges they face.</div>
             <div className="review-section">
                 <div className="review-heading">REVIEWS ({})</div>
                 <div className="review-map">
-                    {statusRev ? reviews.map((da)=>{
+                    {statusRev ? reviews.map((da, key)=>{
                         return (                            
-                            <div className="review">
+                            <div className="review" key={key}>
                                 <div className="upper">
                                     <div className="left">
                                         <div className="name">{da.id}</div>
@@ -287,11 +287,11 @@ intensity and professionalism regardless of the charges they face.</div>
                 <div className="rating">
                     <div className="user-rating">
                         <div className="rating">
-                            <div className="star-main" style={check===1 || check===2 || check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(1)} checked={check===1 || check===2 || check===3 || check===4 || check===5 ? true : false} /></div>
-                            <div className="star-main" style={check===2 || check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(2)} checked={check===2 || check===3 || check===4 || check===5 ? true : false} /></div>
-                            <div className="star-main" style={check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(3)} checked={check===3 || check===4 || check===5 ? true : false} /></div>
-                            <div className="star-main" style={check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(4)} checked={check===4 || check===5 ? true : false} /></div>
-                            <div className="star-main" style={check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onClick={()=>setCheck(5)} checked={check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===1 || check===2 || check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onChange={()=>setCheck(1)} checked={check===1 || check===2 || check===3 || check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===2 || check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onChange={()=>setCheck(2)} checked={check===2 || check===3 || check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===3 || check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onChange={()=>setCheck(3)} checked={check===3 || check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===4 || check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onChange={()=>setCheck(4)} checked={check===4 || check===5 ? true : false} /></div>
+                            <div className="star-main" style={check===5 ? {backgroundImage: "url(" + starFill + ")"} : {backgroundImage: "url(" + star + ")"}}><input className="star" type="checkbox" onChange={()=>setCheck(5)} checked={check===5 ? true : false} /></div>
                         </div>
                     </div>
                 </div>

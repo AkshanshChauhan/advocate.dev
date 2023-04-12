@@ -73,7 +73,7 @@ function Main() {
                 <Route path="/myprofile/my-loyalty-status" element={<MyLoyality height={400} top={60} />} />
                 <Route path="/myprofile/wishlist" element={<Wishlist height={400} top={60} />} />
                 <Route path="/user/:id" element={<User/>}/>
-                <Route path="/chat" element={<Chat />}/>
+                <Route path="/chat/:id" element={<Chat />}/>
                 <Route path="/blog/:id" element={<BlogPage />} />
             </Routes>
         </BrowserRouter>

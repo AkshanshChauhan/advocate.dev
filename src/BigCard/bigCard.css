@@ -31,6 +31,9 @@
 .bigCard .lowerBigCard .contentText {
   font-size: small;
   color: #8F8F8F;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 .bigCard .lowerBigCard .lowerBigCardRdMo {
   position: absolute;

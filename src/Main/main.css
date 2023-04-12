@@ -1,5 +1,6 @@
 .homeBackground {
   height: 100vh;
+  width: 100%;
   margin-bottom: 100px;
   background-size: cover;
   background-position: center;
@@ -16,6 +17,8 @@
 .homePage .ourProcessInner {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   margin-top: 150px;
   outline: 2px solid #CBCBCB;
   justify-content: space-evenly;
@@ -40,6 +43,7 @@
   background-image: url("../Images/affidavitBg.svg");
 }
 .homePage .affidavit .affidavitProcessBox {
+  flex-wrap: wrap;
   gap: 10px;
   display: flex;
   color: white;
@@ -221,9 +225,12 @@
   align-items: center;
   gap: 10px;
 }
-.userInformation .upper .right .user-charge-and-btn .user-button-section .rating .star {
+.userInformation .upper .right .user-charge-and-btn .user-button-section .rating .rating-star {
   width: 20px;
   height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .userInformation .add-serv {
   display: flex;
@@ -372,9 +379,19 @@
   align-items: center;
   gap: 10px;
 }
-.userInformation .give-review-section .rating .rating .star {
+.userInformation .give-review-section .rating .rating .star-main {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userInformation .give-review-section .rating .rating .star-main .star {
   width: 20px;
   height: 20px;
+  opacity: 0;
+  cursor: pointer;
 }
 .userInformation .give-review-section textarea:nth-child(2) {
   height: 20px;
@@ -409,5 +426,48 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@media (max-width: 700px) {
+  .affidavit {
+    display: grid;
+    padding: 50px;
+    background-size: cover;
+    width: calc(100% - 100px);
+    background-repeat: no-repeat;
+    background-image: url("../Images/affidavitBg.svg");
+  }
+  .affidavit .affidavitProcessBox {
+    flex-wrap: wrap;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .affidavit .affidavitProcessBox .affidavitProcess {
+    gap: 10px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .affidavit .affidavitProcessBox .affidavitProcess h3 {
+    font-weight: 400;
+  }
+  .affidavit .affidavitProcessBox .affidavitProcess .affidavitProcessIcon {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+  }
+  .affidavit .affidavitProcessBox .affidavitProcessArrow {
+    width: 50px;
+    height: 50px;
+    transform: rotateZ(90deg);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }/*# sourceMappingURL=main.css.map */
